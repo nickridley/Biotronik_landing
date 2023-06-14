@@ -59,7 +59,6 @@
   
   <script>
   import gsap from 'gsap'
-  import Solution1 from '@/components/Solution1'
   import Solution2 from '@/components/Solution2'
   if (process.client) {
     var {ScrollTrigger} = require('gsap/ScrollTrigger');
@@ -101,7 +100,6 @@
 
     },
     components: {
-        'solution1': Solution1,
         'solution2': Solution2,
     }
     

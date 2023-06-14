@@ -1,5 +1,5 @@
 <template>
-  <div id="biotronik">
+  <div id="biotronik" >
     <template v-if="mode==='desktop'">
       <div ref="oscar1">
         <oscar1 />

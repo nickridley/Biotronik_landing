@@ -38,4 +38,13 @@ html {
   /* background: linear-gradient(90deg, #6200ee 0%, #03dac5 100%);  */
   background-color: #F25625;
 }
+.font-orange {
+  color: #F25625; 
+}
+.font-grey {
+  color: #6E6E6E;
+}
+.font-bold {
+  font-weight: bold;;
+}
 </style>

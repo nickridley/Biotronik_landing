@@ -93,15 +93,7 @@
     height: 40px;
     
   } 
-  .font-orange {
-    color: #F25625; 
-  }
-  .font-grey {
-    color: #6E6E6E;
-  }
-  .font-bold {
-    font-weight: bold;;
-  }
+
   .contact-form {
     background-color: #FFF6F2;
     position: absolute;
