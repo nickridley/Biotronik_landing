@@ -27,6 +27,7 @@
     </template>
     <template v-if="mode==='tablet'">
       <tablet-oscar1 />
+      <tablet-oscar2 />
     </template>
     <template v-if="mode==='mobile'">
       <hero-content-mobile />
@@ -45,6 +46,8 @@ import Restore from '@/components/Restore'
 import Testimon from '@/components/Testimon'
 import HeroContentMobile from '@/components/HeroContentMobile'
 import TabletOscar1 from '@/components/tablet/Oscar1.vue'
+import TabletOscar2 from '@/components/tablet/Oscar2.vue'
+import TabletSolution from '@/components/tablet/Solution.vue'
 import gsap from 'gsap'
 
 if (process.client) {
@@ -120,7 +123,9 @@ export default {
     'adjust': Adjust,
     'restore': Restore,
     'testimon': Testimon,
-    'tablet-oscar1': TabletOscar1
+    'tablet-oscar1': TabletOscar1,
+    'tablet-oscar2': TabletOscar2,
+    'tablet-solution': TabletSolution
   }
 }
 </script>

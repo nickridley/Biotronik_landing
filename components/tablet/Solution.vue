@@ -1,28 +1,26 @@
 <template>
     <div class="solution-wrapper" id="solution-wrapper">
-
-        <div id="solution-section" class="solution-section" >
-            <div class="solution-section-item solution-section-1">
+        <div  class="solution-section" >
+            <div id="solution-section" class="solution-section-item solution-section-1">
                 <div class="solution1-container" >
                     <div class="solution" >
-                        <img class="solution-box solution-box-1" src="../assets/img/BIO-OscarLP-D-02-Box01-min.png" />
-                        <img class="solution-box solution-box-2" src="../assets/img/BIO-OscarLP-D-02-Box02-min.png" />
-                        <img class="solution-box solution-box-3" src="../assets/img/BIO-OscarLP-D-02-Box03-min.png" />
+                        <img class="solution-box solution-box-1" src="../../assets/img/solution/BIO-OscarLP-M-02-Box01-min.png" />
+                        <img class="solution-box solution-box-2" src="../../assets/img/solution/BIO-OscarLP-M-02-Box02-min.png" />
+                        <img class="solution-box solution-box-3" src="../../assets/img/solution/BIO-OscarLP-M-02-Box03-min.png" />
                     </div>
                 </div>
             </div>
-            <div class="solution-section-item solution-section-2">
+            <div id="solution2-section" class="solution-section-item solution-section-2" style="overflow: hidden;">
                 <div class="solution2-container" >
-                    <div class="flex" style="width: 80%;">
-                    <div style="position: absolute; left: 0; width: 90vw;">
-                        <div id="chartLottie" class="lottie-wrapper" ref="chart" style="width: 100%;"></div>
-                    </div>
-                    <div style="position: absolute; width: 50%; left: 50%;">
+                    <div style="width: 85%;">
+                        <div style="position: absolute; left: -3vw; top: 0vh;">
+                            <div id="chartLottie" class="lottie-wrapper" ref="chart" style="width: 150vw; max-width: 1032px;"></div>
+                        </div>
                         <div id="chartLottie2" class="lottie-wrapper2" ref="dial" style=""></div>
-                        
-                        <p class="font-grey" style="font-weight: bold; padding-top: 30px; padding-left: 50px; font-size: 35px; border: solid 1px; border-width: 1px 0 0 0;" >An average PTA ballon requires up to 65 stock units to cover a full size range. The Oscar PTA Ballon only needs 11.</p>
-                        <p class="font-grey" style=" padding-top: 30px; padding-left: 50px; margin-top: 100px;">Compared to equivalent available sizes of Passeo® - 18 PTA balloons</p>
-                    </div>
+                        <div style="position: absolute; left: 5%; bottom: 30px;">
+                            <p class="font-grey" style="padding-top:20px; padding-left: 20px; font-size: 20px; line-height: 21px;" >An average PTA ballon requires up to<br> 65 stock units to cover a full size range.<br> The Oscar PTA Ballon only needs 11.</p>
+                            <p class="font-grey" style=" padding-top: 30px; padding-left: 20px; margin-top: 10px;">Compared to equivalent available sizes of Passeo® - 18 PTA balloons</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -37,10 +35,7 @@
         overflow: hidden;
     }
     .solution-section {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow: hidden;
-        width: 200%;
+
     }
 
     .solution-section-item {
@@ -57,6 +52,7 @@
 
     .solution-box {
         position: absolute;
+        height: 100vh;
         width: 100vw;
     }
 
@@ -74,19 +70,25 @@
     .solution2 {
         opacity: 0;
     }
+    #solution2-section {
+        height: 100vh;
+        padding-top: 75px;
+    }
     .solution2-container {
         position: relative;
-        height: 100vh;
+        height: 70vh;
         background-color: white;
         display: flex;
         justify-content: center;
-        padding-top: 100px;
+        overflow: hidden;
         /* display: flex; */
-  }
+    }
     #chartLottie2 {
-        scale: 2;
+        scale: 1.8;
         height: 50%;
-        transform: translate(-25%, 85px); 
+        position: absolute;
+        top: 8vh;
+        right: 1vw;
     }
   </style>
   
@@ -139,33 +141,29 @@
             }
         })
         .to('.solution .solution-box-1', {scale: 0.6})
-        .to('.solution .solution-box-1', {x: '-100vw'})
-        .to('.solution .solution-box-2', {x: '-100vw'})
-        .add('move')
-        .to('.solution .solution-box-3', {opacity: 0}, 'move')  
-        .to(panels, {
-            xPercent: -100 * ( panels.length - 1 ),
-            ease: "none",
-            onComplete: () => {
-                animation2.play()
+        .to('.solution .solution-box-1', {y: '-150vh'})
+        .to('.solution .solution-box-2', {y: '-150vh'})
+
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: '#solution2-section',
+                start: 'center center',
+                scrub: true,
+                pin: true,
+                end: '+4000'
             }
-        }, 'move')
+        })
         .add('lottie')
         .to(playhead, {
             frame: 58,
             ease: "none",
+            onStart: () => {
+                animation2.play()
+            },
             onUpdate: (a,b,c) => {
                 animation3.goToAndStop(playhead.frame, true)
             },
         },'lottie')
-        // .to(playhead1, {
-        //     frame: 58,
-        //     ease: "none",
-        //     Togg
-        //     onUpdate: (a,b,c) => {
-        //         animation2.goToAndStop(playhead1.frame, true)
-        //     },
-        // },'lottie');
     },
     components: {
     },

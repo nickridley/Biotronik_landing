@@ -69,6 +69,12 @@
             </div>
           </div>
         </div>
+        <div class="flex" style="font-size: 12px; width: 100%; padding-left: 10px;">
+          <p class="mr-3">GENERAL TEMRS AND CONDITIONS</p>
+          <p class="mr-3">COOKIE SETTINGS</p>
+          <p class="mr-3">IMPRINT</p>
+          <p>LEGAL DISCLAIMER</p>
+        </div>
       </div>
     <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
   </nav>
