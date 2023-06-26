@@ -15,7 +15,7 @@
             <p class="text-white" style="font-size: 80px; line-height: 80px;">Oscar</p>
             <p class="text-white" style="font-size: 20px; padding-top: 5px">®</p>
           </div>
-          <p class="text-white mb-5" style="font-size: 25px;">One Solution: Cross. Adjust. Restore.</p>
+          <p class="text-white mb-5" style="font-size: 25px;"><b>O</b>ne <b>S</b>olution: <b>C</b>ross. <b>A</b>djust. <b>R</b>estore.</p>
           <p class="text-white" style="font-size: 40px; line-height: 40px;">The all-in-one solution to reach,</p>
           <div class="flex">
             <p class="text-white" style="font-size: 40px;">cross and prepare lesions</p>
@@ -45,7 +45,7 @@
           <div class="flex">
             <button class="my-5 request-btn">Request now</button>
           </div>
-          <p class="my-4 font-grey" style="font-size: 15px; line-height: 18px;" >Your information will be processed in accordance with our <span>privacy statement.</span></p>
+          <p class="my-4 font-grey" style="font-size: 15px; line-height: 18px;" >Your information will be processed in accordance with our <span style="text-decoration: underline;">privacy statement.</span></p>
           <p class="my-4 font-grey" style="font-size: 15px; line-height: 18px;" >Please note that you can withdraw your consent at any time by using the unsubscribe option in our e-mails.</p>
           <p class="my-4 font-grey" style="font-size: 15px; line-height: 18px;" >*indicates required field.</p>
 
@@ -55,7 +55,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
   .main-img, .oscar-texts, .contact-form {
     transition: all 1.5s ease-out, opacity 2.5s ease-out;
   }
@@ -73,7 +73,7 @@
   }
   .oscar-texts {
     position: absolute; 
-    left: 10%;
+    left: 4%;
     bottom: 100px;
   }
   .request-btn {
@@ -101,7 +101,7 @@
     padding-right: 30px;
     top: 150px;
     right: 10%;
-    max-width: 400px;
+    max-width: 464px;
   }
   .loading-page {
     position: fixed;

@@ -19,7 +19,9 @@
   "dependencies": {
     "gsap": "^3.11.5",
     "nuxt": "^2.14.3",
+    "nuxt-agile": "^1.0.1",
     "nuxt-svg-loader": "^1.2.0",
+    "vue-agile": "^2.0.0",
     "vue-lottie": "^0.2.1"
   },
   "devDependencies": {

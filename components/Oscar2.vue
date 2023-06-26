@@ -4,33 +4,33 @@
       class="mx-auto items-center container-fluid"
       style="width: 80%;"
     >
-      <div class="flex justify-between items-center oscar2-texts"  style="padding-top: 200px;">
+      <div class="flex justify-between items-stretch oscar2-texts"  style="padding-top: 200px;">
         <div style="width: 30%;">
           <div class="flex justify-center mb-5">
             <img src="../assets/img/oscar/One solution X2.png" width="300px" />
           </div>
-          <p class="text-white text-center" style="font-size: 35px; font-weight: bold;">One Solution.</p>
-          <p class="text-white text-center" style="font-size: 35px; font-weight: bold;">Multiple functions.</p>
-          <p class="text-white text-center" style="font-size: 35px; font-weight: bold;">No compromise.</p>
-          <p style="color: #CDCDCD;" class="text-center mt-5" >Achieve more with less. Optimize your stock management and simplify your procedural flow</p>
+          <p class="text-white text-center" style="font-size: 30px; font-weight: bold;">One Solution.</p>
+          <p class="text-white text-center" style="font-size: 30px; font-weight: bold;">Multiple functions.</p>
+          <p class="text-white text-center" style="font-size: 30px; font-weight: bold;">No compromise.</p>
+          <p style="color: #CDCDCD;" class="text-center mt-5" >Achieve more with less. Optimize your <br>stock management and simplify your <br>procedural flow</p>
         </div>
         <div style="width: 30%;">
           <div class="flex justify-center mb-5">
             <img src="../assets/img/oscar/Lesion-specific X2.png" width="300px" />
           </div>
-          <p class="text-white text-center" style="font-size: 35px; font-weight: bold;">Lesion-specific</p>
-          <p class="text-white text-center" style="font-size: 35px; font-weight: bold;">angioplasty with</p>
-          <p class="text-white text-center" style="font-size: 35px; font-weight: bold;">length-adjustable balloon</p>
-          <p style="color: #CDCDCD;" class="text-center mt-5" >Customize your angioplasty by matching ballon exactly to lesion length</p>
+          <p class="text-white text-center" style="font-size: 30px; font-weight: bold;">Lesion-specific</p>
+          <p class="text-white text-center" style="font-size: 30px; font-weight: bold;">angioplasty with</p>
+          <p class="text-white text-center" style="font-size: 30px; font-weight: bold;">length-adjustable balloon</p>
+          <p style="color: #CDCDCD;" class="text-center mt-5" >Customize your angioplasty <br>by matching ballon exactly<br> to lesion length</p>
         </div>
         <div style="width: 30%;">
           <div class="flex justify-center mb-5">
             <img src="../assets/img/oscar/User-adjustable X2.png" width="300px" />
           </div>
-          <p class="text-white text-center" style="font-size: 35px; font-weight: bold;">User-adjustable guide</p>
-          <p class="text-white text-center" style="font-size: 35px; font-weight: bold;">wire support for</p>
-          <p class="text-white text-center" style="font-size: 35px; font-weight: bold;">pushability or flexibility</p>
-          <p style="color: #CDCDCD;" class="text-center mt-5" >User adjustable guide wire support so you can choose the pushability and flexibility you need</p>
+          <p class="text-white text-center" style="font-size: 30px; font-weight: bold;">User-adjustable guide</p>
+          <p class="text-white text-center" style="font-size: 30px; font-weight: bold;">wire support for</p>
+          <p class="text-white text-center" style="font-size: 30px; font-weight: bold;">pushability or flexibility</p>
+          <p style="color: #CDCDCD;" class="text-center mt-5" >User adjustable guide wire <br>support so you can choose the <br>pushability and flexibility you need</p>
         </div>
       </div>
       <div style="margin-top: 200px; padding-bottom: 200px;">
@@ -90,6 +90,7 @@ export default {
       scrollTrigger: {
         trigger: '.oscar2-texts',
         start: 'top center',
+        end: 'top top',
         scrub: true,
         // ease: gsap.Power3.easeOut
       }

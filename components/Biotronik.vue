@@ -1,18 +1,32 @@
 <template>
-  <div id="biotronik" >
+  <div id="biotronik" style="overflow-x: hidden;">
     <template v-if="mode==='desktop'">
-      <div ref="oscar1">
-        <oscar1 />
-      </div>
-      <div ref="oscar2">
-        <oscar2 />
+      <div id="oscar-wrapper">
+        <div ref="oscar1">
+          <oscar1 />
+        </div>
+        <div ref="oscar2">
+          <oscar2 />
+        </div>
       </div>
       <div ref="solution">
         <solution />
       </div>
-      <div style="height: 1000px; background-color: black;">
-
+      <div>
+        <cross />
       </div>
+      <div>
+        <adjust />
+      </div>
+      <div>
+        <restore />
+      </div>
+      <div>
+        <testimon />
+      </div>
+    </template>
+    <template v-if="mode==='tablet'">
+      <tablet-oscar1 />
     </template>
     <template v-if="mode==='mobile'">
       <hero-content-mobile />
@@ -25,7 +39,12 @@
 import Oscar1 from '@/components/Oscar1'
 import Oscar2 from '@/components/Oscar2'
 import Solution from '@/components/Solution'
+import Cross from '@/components/Cross'
+import Adjust from '@/components/Adjust'
+import Restore from '@/components/Restore'
+import Testimon from '@/components/Testimon'
 import HeroContentMobile from '@/components/HeroContentMobile'
+import TabletOscar1 from '@/components/tablet/Oscar1.vue'
 import gsap from 'gsap'
 
 if (process.client) {
@@ -68,7 +87,8 @@ export default {
   },
   mounted () {
 
-    if (window.innerWidth >= 768) this.mode = 'desktop';
+    if (window.innerWidth >= 1300) this.mode = 'desktop';
+    else if(window.innerWidth >= 320) this.mode = 'tablet'
     else this.mode = 'mobile';
     setTimeout(() => {
       const {oscar1, oscar2} = this.$refs;
@@ -95,7 +115,12 @@ export default {
     'oscar1': Oscar1,
     'oscar2': Oscar2,
     'solution': Solution,
-    'hero-content-mobile': HeroContentMobile
+    'cross': Cross,
+    'hero-content-mobile': HeroContentMobile,
+    'adjust': Adjust,
+    'restore': Restore,
+    'testimon': Testimon,
+    'tablet-oscar1': TabletOscar1
   }
 }
 </script>
