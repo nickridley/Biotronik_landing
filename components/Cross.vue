@@ -42,7 +42,7 @@
 				<div class="cross-right-3 cross-right-item flex items-center">
 					<div class="cross-support-2" style="height: 100%; position: relative;">
 						<!-- <img src="../assets/img/cross/Braided support Cath X2.png" style="padding-left: 20px; height: 200px;" /> -->
-						<video id="cross-video" src="../assets/video/cross-video.mp4" style="width;: 100%"></video>
+						<video id="cross-video" src="../assets/video/cross-video.mp4" style="width;: 100%" muted="true"></video>
 						<div class="flex justify-center items-center mt-20" style="padding-left: 30%; right: 6vw; bottom: 14vh; position: absolute;">
 							<div>
 								<p class="text-white" style="font-weight: bold; font-size: 50px; line-height: 50px;">Cross</p>
@@ -242,7 +242,8 @@
 				}
 			})
 			.add("dialtor-move-1")
-			.to(".cross-section1", {top: '-100vh', duration: 1, onStart: function(){
+			.to(".cross-section1", {top: '-100vh', duration: 1, onComplete: function(){
+				corssVideo.muted = true;
 				corssVideo.play()
 			} }, "dialtor-move-1")
 
