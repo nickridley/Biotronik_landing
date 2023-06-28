@@ -107,7 +107,7 @@
 	</div>
 </template>
   
-<style>
+<style scoped>
 	.color-gray {
 		color: #6E6E6E;
 	}

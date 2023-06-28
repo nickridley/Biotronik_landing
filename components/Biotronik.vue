@@ -1,5 +1,5 @@
 <template>
-  <div id="biotronik" style="overflow-x: hidden;">
+  <div id="biotronik" style="overflow: hidden;">
     <template v-if="mode==='desktop'">
       <div id="oscar-wrapper">
         <div ref="oscar1">
@@ -28,6 +28,9 @@
     <template v-if="mode==='tablet'">
       <tablet-oscar1 />
       <tablet-oscar2 />
+      <tablet-solution />
+      <tablet-cross />
+      <tablet-adjust />
     </template>
     <template v-if="mode==='mobile'">
       <hero-content-mobile />
@@ -48,6 +51,8 @@ import HeroContentMobile from '@/components/HeroContentMobile'
 import TabletOscar1 from '@/components/tablet/Oscar1.vue'
 import TabletOscar2 from '@/components/tablet/Oscar2.vue'
 import TabletSolution from '@/components/tablet/Solution.vue'
+import TabletCross from '@/components/tablet/Cross.vue'
+import TabletAdjust from '@/components/tablet/Adjust.vue'
 import gsap from 'gsap'
 
 if (process.client) {
@@ -125,7 +130,9 @@ export default {
     'testimon': Testimon,
     'tablet-oscar1': TabletOscar1,
     'tablet-oscar2': TabletOscar2,
-    'tablet-solution': TabletSolution
+    'tablet-solution': TabletSolution,
+    'tablet-cross': TabletCross,
+    'tablet-adjust': TabletAdjust
   }
 }
 </script>
