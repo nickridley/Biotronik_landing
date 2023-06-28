@@ -21,10 +21,8 @@
 							</div>
 							
 					</div>
-					<div class="metal-section-temp">
-					</div>
 					<div class="metal-section">
-									<img class="img-ballon" src="../../assets/img/adjust/ballon.png" />
+									<img class="img-ballon" src="../../assets/img/adjust/vertical_balloon.png" style="width: 77px;" />
 									<div class="first-marker">
 													<div class="first-marker-arrow"></div>
 													<p class="first-marker-title">Proximal marker</p>
@@ -109,71 +107,55 @@
 					font-size: 22px;
 	}
 
-	.metal-section-temp {
-					background-color: rgb(244, 101, 38);
-					height: 100vh;
-	}
-
 	.metal-section {
 					background-color: rgb(244, 101, 38);
-					height: 100vh;
 					position: relative;
-					overflow: hidden;
+					display: flex;
+					justify-content: flex-end;
+					padding-right: 20%;
 	}
 
 	.img-ballon {
-					position: absolute;
-					top: 50%;
-					height: 67vw;
-	max-width: 400vw;
-	width: 400vw;
-					transform: translateY(-50%);
+			transform: rotateZ(90);
 	}
 
 	.first-marker {
 					position: absolute;
 					color: white;
-					opacity: 0;
-					top: 55%;
-	left: 13vw;
+					top: 100px;
+					left: 10%;
 	}
 
 	.first-marker-arrow {
-					width: 123px;
-	height: 123px;
-					border-right: 1px solid white;
+					width: 50vw;
+					height: 1px;
 					border-bottom: 1px solid white;
 	}
 
 	.first-marker-title {
-					font-size: 30px;
+					font-size: 20px;
 	}
 	.first-marker-content {
-					font-size: 20px;
+					font-size: 16px;
 	}
 
 	.second-marker {
-					display: flex;
-					flex-direction: column;
-					align-items: center;
 					position: absolute;
 					color: white;
-					opacity: 0;
-					top: 55%;
-					right: 10vw;
+					bottom: 60px;
+					left: 10%;
 	}
 	.second-marker-arrow {
-					width: 40vw;
-					height: 8vw;
+					width: 50vw;
+					height: 1px;
 					border-bottom: 1px solid white;
-					border-left: 1px solid white;
 	}
 
 	.second-marker-title {
-					font-size: 30px;
+					font-size: 20px;
 	}
 	.second-marker-content {
-					font-size: 20px;
+					font-size: 16px;
 	}
 
 	.third-marker {

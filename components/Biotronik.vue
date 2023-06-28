@@ -31,6 +31,8 @@
       <tablet-solution />
       <tablet-cross />
       <tablet-adjust />
+      <tablet-restore />
+      <tablet-test />
     </template>
     <template v-if="mode==='mobile'">
       <hero-content-mobile />
@@ -53,6 +55,8 @@ import TabletOscar2 from '@/components/tablet/Oscar2.vue'
 import TabletSolution from '@/components/tablet/Solution.vue'
 import TabletCross from '@/components/tablet/Cross.vue'
 import TabletAdjust from '@/components/tablet/Adjust.vue'
+import TabletRestore from '@/components/tablet/Restore.vue'
+import TabletTestimon from '@/components/tablet/Testimon.vue'
 import gsap from 'gsap'
 
 if (process.client) {
@@ -132,7 +136,9 @@ export default {
     'tablet-oscar2': TabletOscar2,
     'tablet-solution': TabletSolution,
     'tablet-cross': TabletCross,
-    'tablet-adjust': TabletAdjust
+    'tablet-adjust': TabletAdjust,
+    'tablet-restore': TabletRestore,
+    'tablet-test': TabletTestimon
   }
 }
 </script>
