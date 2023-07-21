@@ -29,13 +29,14 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+   plugins: ["~/plugins/asscroll.client.js"],
   /*
    ** Nuxt.js dev-modules
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    // 'nuxt-gsap-module'
   ],
   /*
    ** Nuxt.js modules
@@ -49,6 +50,7 @@ export default {
   ** Router configuration
   */
   router: {
+    base: '/static/Oscar/',
     scrollBehavior: async (to, from, savedPosition) => {
       if (savedPosition) {
         return savedPosition
@@ -76,6 +78,7 @@ export default {
       return { x: 0, y: 0 }
     }
   },
+
   /*
    ** Build configuration
    */
@@ -83,6 +86,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    transpile: ['gsap'],
     extend(config, ctx) {
       loaders: {
         file: {

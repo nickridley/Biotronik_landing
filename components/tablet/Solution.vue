@@ -4,7 +4,12 @@
             <div id="solution-section" class="solution-section-item solution-section-1">
                 <div class="solution1-container" >
                     <div class="solution" >
-                        <img class="solution-box solution-box-1" src="../../assets/img/solution/BIO-OscarLP-M-02-Box01-min.png" />
+                        <div class="solution-box solution-box-1" style="color: #fd4f01; border-radius: 20px; background-color: white; text-align: center;">
+                            <div>
+                                <p>One</p>
+                                <p>Solution</p>
+                            </div>
+                        </div>
                         <img class="solution-box solution-box-2" src="../../assets/img/solution/BIO-OscarLP-M-02-Box02-min.png" />
                         <img class="solution-box solution-box-3" src="../../assets/img/solution/BIO-OscarLP-M-02-Box03-min.png" />
                     </div>
@@ -18,8 +23,8 @@
                         </div>
                         <div id="chartLottie2" class="lottie-wrapper2" ref="dial" style=""></div>
                         <div style="position: absolute; left: 5%; bottom: 30px;">
-                            <p class="font-grey" style="padding-top:20px; padding-left: 20px; font-size: 20px; line-height: 21px;" >An average PTA ballon requires up to<br> 65 stock units to cover a full size range.<br> The Oscar PTA Ballon only needs 11.</p>
-                            <p class="font-grey" style=" padding-top: 30px; padding-left: 20px; margin-top: 10px;">Compared to equivalent available sizes of Passeo® - 18 PTA balloons</p>
+                            <p class="font-grey" style="padding-top:20px; padding-left: 20px; font-size: 20px; line-height: 21px;" >An average PTA ballon requires up to<br> 65<sup>◊</sup> stock units to cover a full size range.<br> The Oscar PTA Ballon only needs 11.</p>
+                            <p class="font-grey" style=" padding-top: 30px; padding-left: 20px; margin-top: 10px;"><sup>◊</sup>Compared to equivalent available sizes of Passeo<sup>®</sup>-14 and Passeo<sup>®</sup>-18 PTA balloons</p>
                         </div>
                     </div>
                 </div>
@@ -34,8 +39,8 @@
     .solution-wrapper {
         overflow: hidden;
     }
-    .solution-section {
-
+    #solution-section {
+        padding-top: 75px;
     }
 
     .solution-section-item {
@@ -58,6 +63,13 @@
 
     .solution-box-1 {
         z-index: 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 130px;
+        line-height: 128px;
+        font-weight: bold;
+        background: linear-gradient(to right, #f4f4f4, #f3f3f3);
     }
     .solution-box-2 {
         z-index: 2;
@@ -137,12 +149,12 @@
                 start: 'center center',
                 scrub: true,
                 pin: true,
-                end: '+4000'
+                end: '+=4000'
             }
         })
-        .to('.solution .solution-box-1', {scale: 0.6})
-        .to('.solution .solution-box-1', {y: '-150vh'})
-        .to('.solution .solution-box-2', {y: '-150vh'})
+        .to('.solution .solution-box-1', {scale: 0.6, ease: "power2.in"})
+        .to('.solution .solution-box-1', {y: '-150vh', ease: "power2.in"})
+        .to('.solution .solution-box-2', {y: '-150vh', ease: "power2.in"})
 
         gsap.timeline({
             scrollTrigger: {
@@ -150,18 +162,22 @@
                 start: 'center center',
                 scrub: true,
                 pin: true,
-                end: '+4000'
+                end: '+=1000'
             }
         })
         .add('lottie')
         .to(playhead, {
             frame: 58,
-            ease: "none",
-            onStart: () => {
-                animation2.play()
-            },
+            duration: 3,
             onUpdate: (a,b,c) => {
                 animation3.goToAndStop(playhead.frame, true)
+            },
+        },'lottie')
+        .to(playhead1, {
+            frame: 59,
+            duration: 3,
+            onUpdate: (a,b,c) => {
+                animation2.goToAndStop(playhead1.frame, true)
             },
         },'lottie')
     },

@@ -17,12 +17,15 @@
     "test:dev": "jest --watch"
   },
   "dependencies": {
-    "gsap": "^3.11.5",
+    "@ashthornton/asscroll": "^2.0.11",
+    "gsap": "./gsap-bonus.tgz",
     "nuxt": "^2.14.3",
     "nuxt-agile": "^1.0.1",
+    "nuxt-gsap-module": "^2.0.0",
     "nuxt-svg-loader": "^1.2.0",
     "vue-agile": "^2.0.0",
-    "vue-lottie": "^0.2.1"
+    "vue-lottie": "^0.2.1",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",

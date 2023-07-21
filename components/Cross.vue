@@ -3,21 +3,21 @@
 		
 		<div class="cross-container">
 			<div class="flex justify-center cross-left" style="background-color: #F7AF8E; width: 40%;">
-				<div class="cross-section1" id="cross-section1">
+				<div class="cross-section2" id="cross-section2">
 					<img src="../assets/img/cross/Lock_grip_2_new.png" id="verticalBiotronik" class="cross-left-dilator-body"/>
 					<img src="../assets/img/cross/Dilator.png" class="cross-left-dilator"/>
 				</div>
 			</div>
 			<div class="cross-right" style="width: 60%;">
-				<div class="cross-right-1 cross-right-item">
+				<div id="cross-right-1" class="cross-right-1 cross-right-item right-section">
 					<div class="cross-dilator">
 						<div style="display: table;">
-							<p class="text-white cross-header">Support Catheter + Dilator</p>
+							<p class="text-white cross-header font-din-medium">Support Catheter + Dilator</p>
 						</div>
 						<img src="../assets/img/cross/Lock grip 1.png" />
-						<div class="flex justify-center items-center mt-20">
+						<div class="flex justify-center items-center mt-20 ">
 							<div>
-								<p class="cross-content" style="font-weight: bold;">Easy-to-use Lock Grip</p>
+								<p class="cross-content font-din-medium">Easy-to-use Lock Grip</p>
 								<p class="cross-content">Seals and secures for accurate</p>
 								<p class="cross-content">positioning of Oscar Dilator,</p>
 								<p class="cross-content">Oscar PTA Ballon or guide wire.</p>
@@ -25,58 +25,62 @@
 						</div>
 					</div>
 				</div>
-				<div class="cross-right-2 cross-right-item flex items-center">
-					<div class="cross-support">
-						<img src="../assets/img/cross/Braided support Cath X2.png" style="padding-left: 20px; height: 200px;" />
-						<div class="flex justify-center items-center mt-20" style="padding-left: 30%;">
-							<div>
-								<p class="text-white" style="font-weight: bold; font-size: 50px; line-height: 50px;">Cross</p>
-								<p class="text-white" style="font-weight: bold; font-size: 35px; line-height: 40px;">Braided Support Catheter</p>
-								<p class="text-white" style="font-weight: bold; font-size: 35px; line-height: 40px;">and Extendable Dilator</p>
-								<p class="text-white" style="font-size: 35px;line-height: 40px;">Position 0:</p>
-								<p class="text-white" style="font-size: 35px;line-height: 40px;">Strongest support level</p>
+				<div id="cross-right-2" class="cross-right-2 cross-right-item right-section" style="padding-top: 75px;">
+					<div class="flex items-center h-full">
+						<div class="cross-support">
+							<img src="../assets/img/cross/Braided support Cath X2.png" style="padding-left: 20px; height: 200px;" />
+							<div class="flex justify-center items-center mt-20" style="padding-left: 30%;">
+								<div>
+									<p class="text-white font-din-medium" style="font-size: 50px; line-height: 50px;">Cross</p>
+									<p class="text-white font-din-medium" style="font-size: 35px; line-height: 40px;">Braided Support Catheter</p>
+									<p class="text-white font-din-medium" style="font-size: 35px; line-height: 40px;">and Extendable Dilator</p>
+									<p class="text-white font-din-light" style="font-size: 35px;line-height: 40px;">Position 0:</p>
+									<p class="text-white font-din-light" style="font-size: 35px;line-height: 40px;">Strongest support level</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="cross-right-3 cross-right-item flex items-center">
+				<div class="cross-right-3 cross-right-item right-section flex items-center">
 					<div class="cross-support-2" style="height: 100%; position: relative;">
 						<!-- <img src="../assets/img/cross/Braided support Cath X2.png" style="padding-left: 20px; height: 200px;" /> -->
-						<video id="cross-video" src="../assets/video/cross-video.mp4" style="width;: 100%" muted="true"></video>
-						<div class="flex justify-center items-center mt-20" style="padding-left: 30%; right: 6vw; bottom: 14vh; position: absolute;">
+						<video id="cross-video" src="../assets/video/cross-video-desktop.mp4" style="width;: 100%" muted="true"></video>
+						<div class="flex justify-center items-center" style="padding-left: 30%;">
 							<div>
-								<p class="text-white" style="font-weight: bold; font-size: 50px; line-height: 50px;">Cross</p>
-								<p class="text-white" style="font-weight: bold; font-size: 35px; line-height: 40px;">Braided Support Catheter</p>
-								<p class="text-white" style="font-weight: bold; font-size: 35px; line-height: 40px;">and Extendable Dilator</p>
-								<p class="text-white" style="font-size: 35px;line-height: 40px;">Position Contrast:</p>
-								<p class="text-white" style="font-size: 35px;line-height: 40px;">Slightly extended dilator tip</p>
-								<p class="text-white" style="font-size: 35px;line-height: 40px;">allows local contrast injection</p>
+								<p class="text-white font-din-medium" style="font-size: 50px; line-height: 50px;">Cross</p>
+								<p class="text-white font-din-medium" style="font-size: 35px; line-height: 40px;">Braided Support Catheter</p>
+								<p class="text-white font-din-medium" style="font-size: 35px; line-height: 40px;">and Extendable Dilator</p>
+								<p class="text-white font-din-light" style="font-size: 35px;line-height: 40px;">Position Contrast:</p>
+								<p class="text-white font-din-light" style="font-size: 35px;line-height: 40px;">Slightly extended dilator tip</p>
+								<p class="text-white font-din-light" style="font-size: 35px;line-height: 40px;">allows local contrast injection</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="cross-right-4 cross-right-item" style="position: relative;">
-					<div style="height: 100vh; position: absolute; width: 100%; background-color: white;"></div>
-					<div class="cross-curved" style="position: absolute; width: 100%;">
+				<div class="cross-right-4 right-section" style="position: relative; padding-top: 80px; min-height: 100vh; padding-bottom: 30px;">
+					<div class="cross-curved" style="width: 100%;">
 						<div class="flex justify-end items-center">
-							<img src="../assets/img/cross/curved.jpg" style="width: 80%; max-width: 758px;"/>
+							<img src="../assets/img/cross/curved.jpg" style="width: 80%; max-width: 758px; max-height: 57vh;"/>
 						</div>
-						<div class="flex justify-start items-center mt-20" style="padding-left: 100px;">
+						<div class="flex justify-start items-center" style="padding-left: 100px;">
 							<div>
-								<p class="font-orange font-bold text-[50px]" style="font-weight: bold; font-size: 50px; line-height: 50px;">Cross</p>
-								<p class="font-grey" style="font-weight: bold; font-size: 35px; line-height: 40px;">Extended Dilator</p>
-								<p class="font-grey" style="font-size: 35px;line-height: 40px;">Position Max Flex:</p>
-								<p class="font-grey" style="font-size: 35px;line-height: 40px;">Most flexible support level</p>
-								<p class="font-grey" style="font-size: 35px;line-height: 40px;">with fully extended dilator</p>
+								<p class="font-orange font-bold text-[50px] font-din-medium" style="font-size: 40px; line-height: 45px;">Cross</p>
+								<p class="font-grey font-din-medium" style="font-size: 35px; line-height: 38px;">Extended Dilator</p>
+								<p class="font-grey cross-4-content font-din-light" >Position Max Flex:</p>
+								<p class="font-grey cross-4-content font-din-light" >Most flexible support level</p>
+								<p class="font-grey cross-4-content font-din-light" >with fully extended dilator</p>
 							</div>
+						</div>
+						<div class="flex justify-end mt-6" style="padding-right: 40px;">
+							<p style="font-size: 20px; color: #a2a2a2;">°Dilator extends from 0-191 mm.</p>
 						</div>
 					</div>
 				</div>
-				<div class="cross-right-5 cross-right-item p-4 color-gray">
-					<p class="font-orange" style="font-size: 30px; border-top: 2px solid #ED6C23; display: table;"><b>Achieve the pushability of an 0.035"</b></p>
-					<p class="font-orange" style="font-size: 30px;"><b>system on an 0.018" platform*</b></p>
+				<div class="cross-right-5 cross-right-item right-section p-4 color-gray" style="padding-top: 100px;">
+					<p class="font-orange font-din-medium" style="font-size: 36px; border-top: 2px solid #ED6C23; display: table;">Achieve the pushability of an 0.035"</p>
+					<p class="font-orange font-din-medium" style="font-size: 36px;">system on an 0.018" platform*</p>
 					<div style="margin-top: 70px;">
-						<p style="border-bottom: 2px solid grey;">Oscar Variale Pushability</p>
+						<p class="font-din-medium" style="border-bottom: 2px solid grey;">Oscar Variale Pushability</p>
 						<div class="grid grid-cols-3 gap-4 pr-4">
 							<div class="col-span-1">
 								<p class="mt-4" style="color: #ED6C23;">Oscar, 0.018" <br>BIOTRONIK</p>
@@ -95,7 +99,11 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-span-2"></div>
+							<div class="col-span-2" style="padding-top: 30px;">
+								<div id="crossLottie" class="lottie-wrapper" ref="crossChart" style="width: 100%; position: relative;">
+									<img src="../assets/img/Scale.png" style="position: absolute; left: 0; right: 0; bottom: -100px;"/>
+								</div>
+							</div>
 						</div>
 						<p class="color-gray mt-3">*Testing performed with Oscar 0.018/6F Support Catheter + Dilator combination</p>
 					</div>
@@ -114,17 +122,27 @@
 	.cross-right-item {
 		height: 100vh;	
 	}
+	.cross-4-content {
+		font-size: 30px;
+		line-height: 33px;
+	}
+	/* .cross-right {
+		overflow-y: scroll;
+		height: 100vh;
+		scroll-snap-type: mandatory;
+		scroll-snap-points-y: repeat(100vh);
+		scroll-snap-type: y mandatory;
+	} */
 	.cross-left {
 		position: relative;
-		height: 100vh;
 	}
-	.cross-section1 {
-		position: fixed;
-		top: 100vh;
+	.cross-section2 {
+		position: absolute;
+		top: 0;
 		height: 140vh;
 		z-index: 200;
 		left: 0;
-		right: 60%;
+		right: 0;
 	}
 	.cross-left-dilator-body {
 		height: 140vh;
@@ -155,18 +173,14 @@
 		font-size: 40px;
 		margin-top: 100px;
 		margin-left: 70px;
-		font-weight: bold;
 	}
 	.cross-container {
 		display: flex;
-		height: 600vh;
 		align-items: stretch;
 		position: relative;
 	}
 
 	.cross-dilator {
-		position: absolute;
-		top: 100vh;
 	}
 
 	.cross-right-1 {
@@ -176,7 +190,7 @@
 		background-color: #F57853;
 	}
 	.cross-right-3 {
-		background-color: #ED6C23;
+		background-color: #ef5823;
 	}
 	.cross-right-4 {
 		background-color: white;
@@ -189,11 +203,13 @@
 	}
 
 	.cross-right, .cross-left {
-		height: 600vh;
 	}
 
 	.cross-support, .cross-support-2, .cross-curved {
 		opacity: 0;
+	}
+	.cross-support {
+		padding-bottom: 60px;
 	}
 </style>
   
@@ -213,117 +229,168 @@
       return {
        
         loading: false,
-        loaded: false
+        loaded: false,
+		scrolling : {
+			enabled: true,
+			events: "scroll,wheel,touchmove,pointermove".split(","),
+			prevent: e => e.preventDefault(),			
+		}
       };
     },
+	computed:{
+		isNavClicked(){
+			return this.$store.state.isNavClicked
+		},
+	},
     mounted() {
-			let corssVideo = document.getElementById('cross-video')
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: '.cross-right-1',
-          start: 'top top',
-          scrub: true,
-					end: "bottom top",
-					pin: true
-          // ease: gsap.Power3.easeOut
-        }
-      })
-			.add('move')
-			.to(".cross-section1", {top: 0, duration: 1 }, "move")
-  		.to(".cross-dilator", { top: 0, duration: 1 }, "move")
-     
-			gsap.timeline({
-				scrollTrigger: {
-					trigger: '.cross-right-2',
-					start: 'top bottom',
-					end: 'top top',
-					scrub: true,
-					// ease: gsap.Power3.easeOut
-				}
-			})
-			.add("dialtor-move-1")
-			.to(".cross-section1", {top: '-100vh', duration: 1, onComplete: function(){
+		let playhead = {frame: 0}
+		const animation3 = lottie.loadAnimation({
+                container: gsap.utils.toArray("#crossLottie")[0],
+                renderer: "svg",
+                loop: false,
+                autoplay: false,
+                path: 'https://assets9.lottiefiles.com/packages/lf20_rJzvFizMU4.json'
+            });
+
+		const sections = gsap.utils.toArray('.right-section')
+		console.log('sections', sections)
+
+		sections.forEach((section, i) => {
+			// const intoAnim = gsap.from(section.querySelector(".right-col"), {yPercent: 50, duration: 1, paused: true});
+			console.log('section', section)
+			ScrollTrigger.create({
+				trigger: section,
+				start: "top bottom-=1",
+				end: "bottom top+=1",
+				onEnter: () => this.goToSection(section),
+				onEnterBack: () => this.goToSection(section)
+			});
+		});
+
+		let corssVideo = document.getElementById('cross-video')
+
+		gsap.timeline({
+			scrollTrigger: {
+				trigger: '.cross-right-2',
+				start: 'top bottom',
+				end: 'top top',
+				scrub: true,
+			}
+		})
+		.to(".cross-section1", {opacity: 1, duration: 0.1}, "replace-dialtor")
+		.to(".cross-section2", {opacity: 0, duration: 0.1}, "replace-dialtor")
+		.add("dialtor-move-1")
+		.to(".cross-section1", {top: '-100vh', duration: 3, onComplete: function(){
+			setTimeout(() => {
 				corssVideo.muted = true;
-				corssVideo.play()
-			} }, "dialtor-move-1")
+				corssVideo.play();
+			}, 1000);
+		} }, "dialtor-move-1")
 
-			gsap.timeline({
-				scrollTrigger: {
-					trigger: '.cross-right-2',
-					start: 'top center',
-					end: 'top top',
-					scrub: true,
-					// ease: gsap.Power3.easeOut
-				}
-			})
-			.add("dialtor-move-1")
-			.to(".cross-support", {opacity: 1, duration: 1}, "dialtor-move-1")
 		
+		gsap.timeline({
+			scrollTrigger: {
+				trigger: '.cross-right-2',
+				start: 'top center',
+				end: 'top top',
+				scrub: true,
+			}
+		})
+		.add("dialtor-move-1")
+		.to(".cross-support", {opacity: 1, duration: 3}, "dialtor-move-1")
+		.to(".cross-dilator", {opacity: 0, duration: 3}, "dialtor-move-1")
+	
 
-			gsap.timeline({
-				scrollTrigger: {
-					trigger: '.cross-right-3',
-					start: 'top bottom',
-					end: 'top top',
-					scrub: true,
-				}
-			})
-			.add("dialtor-move-2")
-			.to(".cross-left-dilator", {bottom: '-180px', duration: 1}, "dialtor-move-2")
+		gsap.timeline({
+			scrollTrigger: {
+				trigger: '.cross-right-3',
+				start: 'top bottom',
+				end: 'top top',
+				scrub: true,
+			}
+		})
+		.add("dialtor-move-2")
+		.to(".cross-left-dilator", {bottom: '-180px', duration: 3}, "dialtor-move-2")
 
-			gsap.timeline({
-				scrollTrigger: {
-					trigger: '.cross-right-3',
-					start: 'top center',
-					end: 'top top',
-					scrub: true,
-				}
-			})
-			.add("dialtor-move-2")
-			.to(".cross-support-2", {opacity: 1, duration: 1}, "dialtor-move-2")
+		gsap.timeline({
+			scrollTrigger: {
+				trigger: '.cross-right-3',
+				start: 'top center',
+				end: 'top top',
+				scrub: true,
+			}
+		})
+		.add("dialtor-move-2")
+		.to(".cross-support-2", {opacity: 1, duration: 3}, "dialtor-move-2")
 			
 
-			gsap.timeline({
-				scrollTrigger: {
-					trigger: '.cross-right-4',
-					start: 'top bottom',
-					end: 'top top',
-					scrub: true,
-				}
-			})
-			.add("dialtor-move-3")
-			.to(".cross-left-dilator", {bottom: '-30vh', duration: 1}, "dialtor-move-3")
+		gsap.timeline({
+			scrollTrigger: {
+				trigger: '.cross-right-4',
+				start: 'top bottom',
+				end: 'top top',
+				scrub: true,
+			}
+		})
+		.add("dialtor-move-3")
+		.to(".cross-left-dilator", {bottom: '-30vh', duration: 3}, "dialtor-move-3")
 
-			gsap.timeline({
-				scrollTrigger: {
-					trigger: '.cross-right-4',
-					start: 'top center',
-					end: 'top top',
-					scrub: true,
-				}
-			})
-			.add("dialtor-move-3")
-			.to(".cross-curved", {opacity: 1, duration: 1}, "dialtor-move-3")
-			.to(".cross-left-dilator", {bottom: '-30vh', duration: 1}, "dialtor-move-3")
+		gsap.timeline({
+			scrollTrigger: {
+				trigger: '.cross-right-4',
+				start: 'top center',
+				end: 'top top',
+				scrub: true,
+			}
+		})
+		.add("dialtor-move-3")
+		.to(".cross-curved", {opacity: 1, duration: 3}, "dialtor-move-3")
+		.to(".cross-left-dilator", {bottom: '-30vh', duration: 3}, "dialtor-move-3")
 
-
-			gsap.timeline({
-				scrollTrigger: {
-					trigger: '.cross-right-5',
-					start: 'top top',
-					end: 'bottom top',
-					scrub: true,
+		gsap.timeline({
+			scrollTrigger: {
+				trigger: '.cross-right-5',
+				start: 'top 10%',
+				end: 'bottom top',
+				scrub: true,
+				onEnter: () => {
+					animation3.play()
 				}
-			})
-			.to(".cross-section1", {top: '-200vh'})
+			}
+		})
+		.to(".cross-section1", {top: '-200vh', duration: 1})
     },
     
     watch: {
   
     },
     methods: {
-     
-     
+		goToSection(section, anim, i) {
+			if (this.scrolling.enabled && !this.isNavClicked) { // skip if a scroll tween is in progress
+				this.disable();
+				gsap.to(window, {
+					scrollTo: {y: section, autoKill: false},
+					onComplete: this.enable,
+					duration: 1
+				});
+
+				// anim && anim.restart();
+			}
+		},
+		disable() {
+			if (this.scrolling.enabled) {
+				this.scrolling.enabled = false;
+				window.addEventListener("scroll", gsap.ticker.tick, {passive: true});
+				this.scrolling.events.forEach((e, i) => (i ? document : window).addEventListener(e, this.scrolling.prevent, {passive: false}));
+			}
+		},
+		enable() {
+			if (!this.scrolling.enabled) {
+				this.scrolling.enabled = true;
+				window.removeEventListener("scroll", gsap.ticker.tick);
+				this.scrolling.events.forEach((e, i) => (i ? document : window).removeEventListener(e, this.scrolling.prevent));
+			}
+		}
     }
   
     

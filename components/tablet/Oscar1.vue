@@ -1,5 +1,5 @@
 <template>
-  <div style="height: calc(100vh - 83px); overflow: hidden; margin-top: 83px;">
+  <div style="overflow: hidden; margin-top: 83px;">
     <div v-if="loading" class="loading-page">
       <div class="loading"></div>
     </div>
@@ -76,6 +76,10 @@
   .main-img{
     opacity: 0;
     transform: translateX(-150px);
+    position: absolute;
+    top: 0;
+    left: -20px;
+    padding-top: 80px;
   }
   .oscar1-content {
     opacity: 0;
@@ -86,10 +90,8 @@
     transform: translateY(0);
   }
   .oscar1-content {
-    position: absolute; 
-    left: 5%;
-    right: 5%;
-    bottom: 50px;
+    margin-bottom: 40px;
+    margin-top: 40%;
   }
   .oscar-texts {
     

@@ -2,33 +2,36 @@
 	<div class="testimon-wrapper" id="test-wrapper">
 		<h1>Take their word for it</h1>
 		<div class="testimon-video">
-			<video id="main-video" src="https://youtu.be/0MqLI3B4fs4" style="max-height: 68vh; height: 40vh;" controls></video>
+			<iframe id="main-video"  src="https://www.youtube.com/embed/0MqLI3B4fs4" style="max-height: 40vh; height: 36vh; width: 100%;" controls></iframe>
 		</div>
 		<div style="padding-left: 5%; padding-right: 5%;">
-			<p class="testimon-subtitle">PHYSICIAN TESTIMONIAL</p>
+			<div class="flex justify-between align-center" style="margin-top: 10px;">
+				<p class="testimon-subtitle">PHYSICIAN TESTIMONIAL</p>
+				<p class="testimon-date">01/08/23</p>
+			</div>
 			<p class="testimon-content">How does Oscar change the way to approach your procedures?</p>
 		</div>
 		<div class="carousel-section">
 			<agile :options="options">
 					<div class="slide-item">
-						<div class="slide">
-								<video class="carousel-video" src="https://youtu.be/0MqLI3B4fs4" @click="(e)=>onClickVideo(e, 0)"></video>
-								<div class="playing-mask" v-if="videoNo == 0">
+						<div class="slide" @click="(e)=>onClickVideo(e, 0)">
+							<iframe style="pointer-events:none !important; width: 100%;" class="carousel-video" src="https://www.youtube.com/embed/0MqLI3B4fs4" ></iframe>
+							<div class="playing-mask" v-if="videoNo == 0">
 								<div>
 									<div style="display: flex; justify-content: center; height: 40px;"><triangleSVG style="height: 100%;"></triangleSVG></div>
 									<p style="color: #F04E23; font-size: 12px;">NOW PLAYING</p>
 								</div>
 							</div>
 						</div>
-						<p class="mt-3" style="line-height: 17px; height: 46px;">How does Oscar change the way to approach your procedures?</p>
+						<p class="mt-3" style="line-height: 17px; ">How does Oscar change the way to approach your procedures?</p>
 						<div class="flex mt-2" style="color: #7C8082">
 							<p class="mr-3">4:32</p>
 							<p>01/08/23</p>
 						</div>
 					</div>
 					<div class="slide-item">
-						<div class="slide">
-							<video class="carousel-video" src="https://youtu.be/0MqLI3B4fs4" @click="(e)=>onClickVideo(e, 1)"></video>
+						<div class="slide" @click="(e)=>onClickVideo(e, 1)">
+							<iframe style="pointer-events:none !important; width: 100%;" class="carousel-video" src="https://www.youtube.com/embed/0MqLI3B4fs4" ></iframe>
 							<div class="playing-mask" v-if="videoNo == 1">
 								<div>
 									<div style="display: flex; justify-content: center; height: 40px;"><triangleSVG style="height: 100%;"></triangleSVG></div>
@@ -36,15 +39,15 @@
 								</div>
 							</div>
 						</div>
-						<p class="mt-3" style="line-height: 17px; height: 46px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+						<p class="mt-3" style="line-height: 17px; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
 						<div class="flex mt-2" style="color: #7C8082">
 							<p class="mr-3">4:32</p>
 							<p>01/08/23</p>
 						</div>
 					</div>
 					<div class="slide-item">
-						<div class="slide">
-							<video class="carousel-video" src="https://youtu.be/0MqLI3B4fs4" @click="(e)=>onClickVideo(e, 2)"></video>
+						<div class="slide" @click="(e)=>onClickVideo(e, 2)">
+							<iframe style="pointer-events:none !important; width: 100%;" class="carousel-video" src="https://www.youtube.com/embed/0MqLI3B4fs4" ></iframe>
 							<div class="playing-mask" v-if="videoNo == 2">
 								<div>
 									<div style="display: flex; justify-content: center; height: 40px;"><triangleSVG style="height: 100%;"></triangleSVG></div>
@@ -52,7 +55,7 @@
 								</div>
 							</div>
 						</div>
-						<p class="mt-3" style="line-height: 17px; height: 46px;">Proin mattis dolor enim, eget bibendum est feugiat non.</p>
+						<p class="mt-3" style="line-height: 17px; ">Proin mattis dolor enim, eget bibendum est feugiat non.</p>
 						<div class="flex mt-2" style="color: #7C8082">
 							<p class="mr-3">4:32</p>
 							<p>01/08/23</p>
@@ -101,6 +104,7 @@
 .testimon-subtitle {
 	color: #EF5923;
 }
+
 .slide-item {
 	padding: 10px;
 	color: white;
@@ -124,6 +128,118 @@
 	font-size: 23px;
 	font-weight: bold;
 }
+
+  .agile {
+    position: relative;
+  }
+
+  .agile--ssr .agile__slides--cloned {
+    display: none
+  }
+
+  .agile--ssr .agile__slides > * {
+    overflow: hidden;
+    width: 0
+  }
+
+  .agile--ssr .agile__slides > *:first-child {
+    width: 100%
+  }
+
+  .agile--rtl .agile__track,
+  .agile--rtl .agile__slides,
+  .agile--rtl .agile__actions,
+  .agile--rtl .agile__dots {
+    flex-direction: row-reverse;
+  }
+
+  .agile:focus, .agile:active, .agile *:focus, .agile *:active {
+    outline: none;
+  }
+
+  .agile__list {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  .agile__track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .agile__actions {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .agile--no-nav-buttons .agile__actions {
+    justify-content: center;
+  }
+
+  .agile__slides {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-shrink: unset;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  .agile--disabled .agile__slides {
+    display: block;
+    width: 100%;
+  }
+
+  .agile__slide {
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+
+  .agile__slide,
+  .agile__slide * {
+    -webkit-user-drag: none;
+  }
+
+  .agile--fade .agile__slide {
+    opacity: 0;
+    position: relative;
+    z-index: 0;
+  }
+
+  .agile--fade .agile__slide--active {
+    opacity: 1;
+    z-index: 2;
+  }
+
+  .agile--fade .agile__slide--expiring {
+    opacity: 1;
+    transition-duration: 0s;
+    z-index: 1;
+  }
+
+  .agile__nav-button[disabled] {
+    cursor: default;
+  }
+
+  .agile__dots {
+    align-items: center;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    white-space: nowrap;
+  }
+
+  .agile__dot button {
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+  }
 </style>
   
 <script>
@@ -158,13 +274,16 @@
 
 		methods: {
 			onClickVideo(e, no) {
-				console.log(e.target, e.target.src)
-				let url = e.target.src;
+				e.preventDefault()
+				e.stopPropagation()
+				let url = document.getElementsByClassName('carousel-video')[no].src
+				console.log(url)
+
 				let mainVideo = document.getElementById('main-video')
 				mainVideo.src = url;
-				mainVideo.load();
+				// mainVideo.load();
 				this.videoNo = no;
-			}
+			},
 		}
   };
   

@@ -37,13 +37,13 @@
         <p class="text-white" style="font-size: 60px; font-weight: bold;">Oscar</p>
         <p class="text-white" style="font-size: 40px; line-height: 40px;">One Solution:</p>
         <p class="text-white mb-5" style="font-size: 40px; line-height: 40px;">Multiple functions.</p>
-        <p class="text-white" style="font-size: 26px; line-height: 30px;">Simplify your approach to a complex</p>
-        <p class="text-white" style="font-size: 26px; line-height: 30px;">problem. Achieve versatility without</p>
-        <p class="text-white" style="font-size: 26px; line-height: 30px;">compromise. <span style="font-weight: bold;">Flexibility, pushability</span></p>
-        <p class="text-white" style="font-size: 26px; line-height: 30px;"><span style="font-weight: bold;">long or short balloons</span> - use a single</p>
-        <p class="text-white" style="font-size: 26px; line-height: 30px;">system with fully adjustable</p>
-        <p class="text-white" style="font-size: 26px; line-height: 30px;">components to cross and dilate</p>
-        <p class="text-white" style="font-size: 26px; line-height: 30px;">lesions exactly how you want to.</p>
+        <p class="text-white" style="font-size: 26px; line-height: 30px; color: #bfbfbf;">Simplify your approach to a complex</p>
+        <p class="text-white" style="font-size: 26px; line-height: 30px; color: #bfbfbf;">problem. Achieve versatility without</p>
+        <p class="text-white" style="font-size: 26px; line-height: 30px; color: #bfbfbf;">compromise. <span style="font-weight: bold; color: white;">Flexibility, pushability</span></p>
+        <p class="text-white" style="font-size: 26px; line-height: 30px; color: #bfbfbf;"><span style="font-weight: bold; color: white;">long or short balloons</span> - use a single</p>
+        <p class="text-white" style="font-size: 26px; line-height: 30px; color: #bfbfbf;">system with fully adjustable</p>
+        <p class="text-white" style="font-size: 26px; line-height: 30px; color: #bfbfbf;">components to cross and dilate</p>
+        <p class="text-white" style="font-size: 26px; line-height: 30px; color: #bfbfbf;">lesions exactly how you want to.</p>
       </div>
     </div>
   </div>
@@ -89,7 +89,7 @@ export default {
     gsap.timeline({
       scrollTrigger: {
         trigger: '.oscar2-texts',
-        start: 'top center',
+        start: 'top bottom',
         end: 'top top',
         scrub: true,
         // ease: gsap.Power3.easeOut
