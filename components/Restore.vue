@@ -201,6 +201,7 @@
 		height: 100vh;
 		margin-top: 40px;
 		padding-top: 80px;
+		overflow: hidden;
 	}
 	.meet-left {
 		position: absolute;
@@ -348,20 +349,16 @@
 				scrollTrigger: {
 					trigger: '.world-section',
 					start: 'top top',
-					end: '+=3000',
 					scrub: true,
-					pin: true
+					onEnter: () => {
+						animation1.stop();
+						animation2.stop();
+						animation3.stop();
+						animation1.play();
+						animation2.play();
+						animation3.play();
+					}
 				}
-			})
-			.to(playhead, {
-				frame: 58,
-				ease: "power2.in",
-				duration: 3,
-				onUpdate: (a,b,c) => {
-					animation1.goToAndStop(playhead.frame, true)
-					animation2.goToAndStop(playhead.frame, true)
-					animation3.goToAndStop(playhead.frame, true)
-				},
 			})
 
 			gsap.timeline({
@@ -381,6 +378,9 @@
 					scrub: true,
 					end: '+=4000',
 					onEnter: ()=> {
+						animation4.stop();
+						animation5.stop();
+						animation6.stop();
 						animation4.play();
 						animation5.play();
 						animation6.play();
@@ -394,7 +394,6 @@
 				start: "top bottom-=1",
 				end: "bottom top+=1",
 				onEnter: () => this.goToSection(section),
-				onEnterBack: () => this.goToSection(section)
 			});
 
 			const section1 = gsap.utils.toArray('#world-section')[0]
@@ -403,7 +402,6 @@
 				start: "top bottom-=1",
 				end: "bottom top+=1",
 				onEnter: () => this.goToSection(section1),
-				onEnterBack: () => this.goToSection(section1)
 			});
 			
 			// const section2 = gsap.utils.toArray('#achieve-section')[0]
@@ -412,7 +410,6 @@
 			// 	start: "top bottom-=1",
 			// 	end: "bottom top+=1",
 			// 	onEnter: () => this.goToSection(section2, 80),
-			// 	onEnterBack: () => this.goToSection(section2, 80)
 			// });
 
 			gsap.timeline({

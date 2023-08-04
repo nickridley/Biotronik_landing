@@ -1,14 +1,14 @@
 <template>
 	<div class="restore-wrapper" id="restore-wrapper">
 		<div class="world-section">
-			<h1>A Real-World User Evaluation </h1>
+			<h1 class="font-din-light" style="line-height: 34px;">A Real-World User Evaluation </h1>
 			<div class="grid grid-cols-1 gap-4 align-stretch">
 				<div class="world-item world-left col-span-1">
-					<h2 style="display: flex;">Real-World User Evaluation<p style="margin-top: 2px; font-size: 14px;">3</p></h2>
+					<h2>Real-World User Evaluation<sup>3</sup></h2>
 					<div class="world-content" style="padding-left: 0; padding-right: 0;">
 						<div class="world-content-left flex align-center gap-1">
 							<img class="world-left-image" src="../../assets/img/restore/Icon_1.png"/>
-							<div>
+							<div style="font-size: 18px; line-height: 20px;">
 								<p><span class="color-orange">Oscar</span> was evaluated in very complex lesions:</p>
 								<ul>
 									<li>80% CLI patients</li>
@@ -20,7 +20,7 @@
 						</div>
 						<div class="world-content-left flex align-center gap-1">
 							<img class="world-left-image" src="../../assets/img/restore/Icon_2.png"/>
-							<div>
+							<div style="font-size: 18px; line-height: 20px;">
 								<p><span class="color-orange">Oscar</span> use was evaluated:</p>
 								<ul>
 									<li>In 12 different hospitals across the US</li>
@@ -30,7 +30,7 @@
 						</div>
 						<div class="world-content-left flex align-center gap-1">
 							<img class="world-left-image" src="../../assets/img/restore/Icon_3.png"/>
-							<div>
+							<div style="font-size: 18px; line-height: 20px;">
 								<p><span class="color-orange">Oscar</span> in numbers:</p>
 								<ul>
 									<li>Was used in 78 cases</li>
@@ -42,7 +42,7 @@
 					</div>
 				</div>
 				<div class="world-item world-right col-span-1">
-					<h2 style="display: flex; position: relative; margin-bottom: 15px;">Oscar User Evaluation<p style="position: absolute; bottom: 9px; left: 200px; font-size: 14px;">3</p></h2>
+					<h2 style="position: relative; margin-bottom: 15px;">Oscar User Evaluation<sup>3</sup></h2>
 					<div id="world-charts" class="world-content" style="padding-left: 10%; padding-right: 10%;">
 						<div class="grid gap-2 grid-cols-1">
 							<div class="col-span-1 text-center">
@@ -63,12 +63,11 @@
 			</div>
 		</div>
 		<div class="achieve-section">
-			<h1 style="font-size: 34px; line-height: 38px;">Achieve the pushability of an 0.035" system on an 0.018" platform</h1>
+			<h1 style="font-size: 30px; line-height: 34px;">Achieve the pushability of an 0.035" system on an 0.018" platform</h1>
 			<div class="grid grid-cols-3 gap-4 mb-12">
 				<div id="archieve-1" class="col-span-3">
-					<div class="achieve-title flex">
-						<div><span class="color-orange" style="margin-right: 5px;">Oscar</span> pushability on the bench</div>
-						<p style="margin-top: 0px; font-size: 16px;">4</p>
+					<div class="achieve-title font-din-medium">
+						<div><span class="color-orange">Oscar</span> pushability on the bench<sup>4</sup></div>
 					</div>
 					<div class="grid grid-cols-3 gap-3">
 						<div class="col-span-3" style="padding-top: 30px;">
@@ -97,7 +96,7 @@
 			</div>
 			<div id="archieve-2" class="grid grid-cols-1 gap-4">
 				<div class="col-span-1">
-					<p class="achieve-title"><span class="color-orange">Oscar</span> user evaluation </p>
+					<p class="achieve-title font-din-medium"><span class="color-orange">Oscar</span> user evaluation </p>
 					<p>Physicians rated <span class="color-orange">Oscar</span> 0.018" Support Catheter and Dilator combination 91.7% much better/better or equal in crossing performance when compared to the Terumo NaviCross 0.035" crossing catheter</p>
 				</div>
 				<div class="col-span-1" style="padding-left: 15%; padding-right: 15%;">
@@ -108,22 +107,22 @@
 			
 
 		</div>
-		<div class="meet-section">
+		<div id="meet-section" class="meet-section">
 			<div class="meet-right">
 				<div class="meet-header">
-					<h1>Meet Oscar</h1>
-					<p>
+					<h1 class="font-din-light">Meet Oscar</h1>
+					<p class="font-din-light" style="font-size: 24px; line-height: 26px;">
 					The all-in-one solution to reach,<br/>
-					cross and prepare lesions<sup style="font-size: 18px;">1</sup>
+					cross and prepare lesions<sup>1</sup>
 					</p>
 				</div>
 				<div class="meet-solution">
 					<img src="../../assets/img/restore/solution.png" class="meet-solution-image"/>
 					<div class="mask"></div>
-					<button class="meet-button">Watch the video</button>
+					<button class="meet-button font-din-medium">Watch the video</button>
 				</div>
 				<div class="meet-footer">
-					<button class="btn-brochure">View the brochure</button>
+					<button class="btn-brochure font-din-medium">View the brochure</button>
 				</div>
 			</div>
 		</div>
@@ -142,26 +141,28 @@
 		opacity: 0;
 	}
 	.world-section>h1 {
-		font-size: 30px;
+		font-size: 32px;
 		color: #EF5923;
 		margin-bottom: 20px;
+	}
+	.achieve-section {
+		padding-bottom: 80px;
 	}
 	.achieve-section>h1 {
 		font-size: 30px;
 		color: #EF5923;
-		margin-bottom: 20px;
+		padding-bottom: 20px;
 	}
 	.world-item {
 		background-color: white;
 	}
 	.world-item>h2 {
 		color: #EF5923;
-		font-size: 20px;
+		font-size: 26px;
 		margin-bottom: 20px;
 	}
 	.color-orange {
 		color: #EF5923;
-		font-weight: bold;
 	}
 	.world-content {
 		padding: 20px;
@@ -187,8 +188,7 @@
 		padding-top: 80px;
 	}
 	.achieve-title {
-		font-size: 26px;
-		font-weight: bold;
+		font-size: 24px;
 		color: #6E6E6E;
 	}
 	.color-gray {
@@ -198,7 +198,7 @@
 	.meet-section {
 		position: relative;
 		background: linear-gradient(to right, #EF5923, #ec6926, #EF5923);
-		margin-top: 40px;
+		padding-top: 73px;
 	}
 	.meet-left {
 		position: absolute;
@@ -237,13 +237,13 @@
 		box-shadow: 1px 2px 3px 2px #1c1a1a31;
 		color: #EF5923;
 		font-size: 20px;
-		font-weight: bold;
 		position: relative;
 		z-index: 30;
 	}
 
 	.meet-button {
 		background-color: #F04E23;
+		white-space: nowrap;
 		padding: 10px 34px 10px 34px;
 		border-radius: 25px;
 		box-shadow: 1px 2px 3px 2px #1c1a1a91;
@@ -290,15 +290,27 @@
   
     data() {
       return {
+		scrolling : {
+			enabled: true,
+			events: "scroll,wheel".split(","),
+			prevent: e => e.preventDefault(),			
+		},
       };
     },
+	computed:{
+		isNavClicked(){
+			return this.$store.state.isNavClicked
+		},
+	},
     mounted() {			
-			let playhead = {frame: 0}
-			let playhead1 = {frame: 0}
-			let playhead2 = {frame: 0}
-			let playhead3 = {frame: 0}
-			const selft = this;
-			const {restore1, restore2, restore3, restoreChart6, restoreChart7, restoreChart8} = this.$refs;
+		const section = gsap.utils.toArray('#meet-section')[0]
+		ScrollTrigger.create({
+			trigger: section,
+			start: "top bottom-=1",
+			end: "bottom top+=1",
+			onEnter: () => this.goToSection(section),
+			
+		});
 
 			const animation1 = lottie.loadAnimation({
                 container: gsap.utils.toArray("#restore1")[0],
@@ -354,17 +366,15 @@
 					start: 'center center',
 					end: '+=2000',
 					scrub: true,
-					pin: true
+					onEnter: ()=> {
+						animation1.stop();
+						animation2.stop();
+						animation3.stop();
+						animation1.play();
+						animation2.play();
+						animation3.play();
+					}
 				}
-			})
-			.to(playhead, {
-				frame: 58,
-				duration: 3,
-				onUpdate: (a,b,c) => {
-					animation1.goToAndStop(playhead.frame, true)
-					animation2.goToAndStop(playhead.frame, true)
-					animation3.goToAndStop(playhead.frame, true)
-				},
 			})
 
 			gsap.timeline({
@@ -383,40 +393,16 @@
 					start: 'top top',
 					end: '+=3000',
 					scrub: true,
-					pin: true
+					onEnter: ()=> {
+						animation4.stop();
+						animation5.stop();
+						animation6.stop();
+						animation4.play();
+						animation5.play();
+						animation6.play();
+					}
 				}
 			})
-			.add('arhieve-move')
-			.to(playhead2, {
-				frame: 148,
-				duration: 4,
-				onUpdate: (a,b,c) => {
-					animation4.goToAndStop(playhead2.frame, true)
-				},
-			}, 'arhieve-move')
-			.to(playhead3, {
-				frame: 58,
-				duration: 4,
-				onUpdate: (a,b,c) => {
-					animation5.goToAndStop(playhead3.frame, true)
-					animation6.goToAndStop(playhead3.frame, true)
-				},
-			}, 'arhieve-move')
-
-			// gsap.timeline({
-			// 	scrollTrigger: {
-			// 		trigger: '#restoreLottie8',
-			// 		start: 'center center',
-			// 		scrub: true,
-			// 	}
-			// })
-			// .to(playhead1, {
-			// 	frame: 58,
-			// 	ease: "power2.in",
-			// 	onUpdate: (a,b,c) => {
-			// 		animation6.goToAndStop(playhead1.frame, true)
-			// 	},
-			// })
 
 			gsap.timeline({
 				scrollTrigger: {
@@ -440,27 +426,33 @@
 		},
 
 		methods: {
-			goToSection (top) {
-				let observer = ScrollTrigger.normalizeScroll(true);
-				console.log('goTo', top);
-				this.scrollTween = gsap.to(window, {
-					scrollTo: {y: top, autoKill: false},
-					ease: "strong.inOut",
-					duration: 1,
-					onStart: () => {
-						observer.disable(); // for touch devices, as soon as we start forcing scroll it should stop any current touch-scrolling, so we just disable() and enable() the normalizeScroll observer
-						observer.enable();
-					},
-					onComplete: () => this.scrollTween = null,
-					overwrite: true
-				});
+			goToSection(section, anim, i) {
+				if (this.scrolling.enabled && !this.isNavClicked) { // skip if a scroll tween is in progress
+					this.disable();
+					gsap.to(window, {
+						scrollTo: {y: section, autoKill: false},
+						onComplete: this.enable,
+						duration: 1
+					});
+
+					// anim && anim.restart();
+				}
 			},
-			getTopPosition (el, idx) {
-				// return (idx - 1) * window.innerHeight;
-				// if (el.parentElement.classList.contains('pin-spacer')) return el.parentElement.getBoundingClientRect().top + window.scrollY;
-				return el.getBoundingClientRect().top + window.scrollY;
+			disable() {
+				if (this.scrolling.enabled) {
+					this.scrolling.enabled = false;
+					window.addEventListener("scroll", gsap.ticker.tick, {passive: true});
+					this.scrolling.events.forEach((e, i) => (i ? document : window).addEventListener(e, this.scrolling.prevent, {passive: false}));
+				}
 			},
-    	}
+			enable() {
+				if (!this.scrolling.enabled) {
+					this.scrolling.enabled = true;
+					window.removeEventListener("scroll", gsap.ticker.tick);
+					this.scrolling.events.forEach((e, i) => (i ? document : window).removeEventListener(e, this.scrolling.prevent));
+				}
+			}
+		}
   };
   
   

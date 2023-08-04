@@ -1,5 +1,5 @@
 <template>
-  <div style="overflow: hidden; margin-top: 83px;">
+  <div style="height: calc(100vh - 73px); overflow: hidden; margin-top: 73px;">
     <div v-if="loading" class="loading-page">
       <div class="loading"></div>
     </div>
@@ -12,41 +12,47 @@
         </div>
         <div :class="'oscar1-content' + (loaded ? ' show' : '')">
           <div :class="'oscar-texts'" >
-            <div class="flex">
+            <div class="flex font-din-medium">
               <p class="text-white" style="font-size: 60px; line-height: 60px;">Oscar</p>
               <p class="text-white" style="font-size: 20px; padding-top: 5px">®</p>
             </div>
-            <p class="text-white" style="font-size: 22px;">One Solution: Cross. Adjust. Restore.</p>
-            <p class="text-white" style="font-size: 30px; line-height: 30px;">The all-in-one solution to reach,</p>
-            <div class="flex">
+            <p class="text-white" style="font-size: 22px;">
+              <span class="font-din-medium">O</span>ne 
+              <span class="font-din-medium">S</span>olution: 
+              <span class="font-din-medium">C</span>ross. 
+              <span class="font-din-medium">A</span>djust. 
+              <span class="font-din-medium">R</span>estore.
+            </p>
+            <p class="text-white font-din-light" style="font-size: 30px; line-height: 30px;">The all-in-one solution to reach,</p>
+            <div class="flex font-din-light">
               <p class="text-white" style="font-size: 30px;">cross and prepare lesions</p>
               <p class="text-white" style="padding-top: 5px;">1</p>
             </div>
           </div>
           <div :class="'contact-form'" >
-            <p class="font-orange font-bold my-4" style="font-size: 20px; margin: 0;">Get in touch to learn more</p>
+            <p class="font-orange my-4 font-din-medium" style="font-size: 20px; margin: 0;">Get in touch to learn more</p>
             <p class="my-4 font-grey" style="font-size: 14px; font-weight: bold; margin: 0;" >By providing your contact details, you agree that our local BIOTRONIK sales organization will follow-up with you via e-mail.</p>
             <div class="grid grid-cols-2 gap-2">
             <div class="col-span-1">
-              <p class="font-orange font-bold" style="font-size: 14px;" >First Name*</p>
+              <p class="font-orange font-din-medium" style="font-size: 14px;" >First Name*</p>
               <div class="flex">
                 <input class="oscar-input" />
               </div>
             </div>
             <div class="col-span-1">
-              <p class="font-orange font-bold" style="font-size: 14px;" >Last Name*</p>
+              <p class="font-orange font-din-medium" style="font-size: 14px;" >Last Name*</p>
               <div class="flex">
                 <input class="oscar-input" />
               </div>
             </div>
             <div class="col-span-1">
-              <p class="font-orange font-bold" style="font-size: 14px;" >Email Address*</p>
+              <p class="font-orange font-din-medium" style="font-size: 14px;" >Email Address*</p>
               <div class="flex">
                 <input class="oscar-input" />
               </div>
             </div>
             <div class="col-span-1">
-              <p class="font-orange font-bold" style="font-size: 14px;" >Country*</p>
+              <p class="font-orange font-din-medium" style="font-size: 14px;" >Country*</p>
               <div class="flex">
                 <select class="oscar-input" >
                 </select>
@@ -54,7 +60,7 @@
             </div>
             <div class="col-span-1">
               <div class="flex">
-                <button class="my-5 request-btn">Request now</button>
+                <button class="my-5 request-btn font-din-medium">Request now</button>
               </div>
             </div>
             </div>
@@ -90,8 +96,10 @@
     transform: translateY(0);
   }
   .oscar1-content {
-    margin-bottom: 40px;
-    margin-top: 40%;
+    position: absolute; 
+    left: 5%;
+    right: 5%;
+    bottom: 10vh;
   }
   .oscar-texts {
     

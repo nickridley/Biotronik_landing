@@ -15,7 +15,7 @@
             <p class="text-white" style="font-size: 80px; line-height: 80px;">Oscar</p>
             <p class="text-white" style="font-size: 20px; padding-top: 5px">®</p>
           </div>
-          <p class="text-white mb-5" style="font-size: 25px;"><b>O</b>ne <b>S</b>olution: <b>C</b>ross. <b>A</b>djust. <b>R</b>estore.</p>
+          <p class="text-white mb-5" style="font-size: 25px;"><span class="font-din-medium">O</span>ne <span class="font-din-medium">S</span>olution: <span class="font-din-medium">C</span>ross. <span class="font-din-medium">A</span>djust. <span class="font-din-medium">R</span>estore.</p>
           <p class="text-white font-din-light" style="font-size: 40px; line-height: 40px;">The all-in-one solution to reach,</p>
           <div class="flex font-din-light">
             <p class="text-white" style="font-size: 40px;">cross and prepare lesions</p>
@@ -23,7 +23,7 @@
           </div>
         </div>
         <div :class="'contact-form' + (loaded ? ' show' : '')" >
-          <p class="font-orange my-3 font-din-medium" style="font-size: 25px;">Get in touch to learn more</p>
+          <!-- <p class="font-orange my-3 font-din-medium" style="font-size: 25px;">Get in touch to learn more</p>
           <p class="my-3 font-grey" style="font-size: 15px; font-weight: bold;" >By providing your contact details, you agree that our local BIOTRONIK sales organization will follow-up with you via e-mail.</p>
           <p class="font-orange font-din-medium my-1" style="font-size: 20px;" >First Name*</p>
           <div class="flex">
@@ -47,8 +47,8 @@
           </div>
           <p class="my-4 font-grey desktop-show" style="font-size: 15px; line-height: 18px;" >Your information will be processed in accordance with our <span style="text-decoration: underline;">privacy statement.</span></p>
           <p class="my-4 font-grey desktop-show" style="font-size: 15px; line-height: 18px;" >Please note that you can withdraw your consent at any time by using the unsubscribe option in our e-mails.</p>
-          <p class="my-4 font-grey desktop-show" style="font-size: 15px; line-height: 18px;" >*indicates required field.</p>
-
+          <p class="my-4 font-grey desktop-show" style="font-size: 15px; line-height: 18px;" >*indicates required field.</p> -->
+          <iframe src="https://go.demo.pardot.com/l/409163/2023-08-01/21c9" width="100%" height="100%" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
         </div>
       </div>
     </div>
@@ -105,11 +105,11 @@
   .contact-form {
     background-color: #FFF6F2;
     position: absolute;
-    padding-left: 30px;
-    padding-right: 30px;
-    top: 120px;
+    top: 90px;
     right: 10%;
     max-width: 402px;
+    width: 400px;
+    height: 700px;
   }
   .loading-page {
     position: fixed;

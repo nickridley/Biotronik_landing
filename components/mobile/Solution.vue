@@ -18,8 +18,8 @@
                         </div>
                         <div id="chartLottie2" class="lottie-wrapper2" ref="dial" style=""></div>
                         <div style="position: absolute; left: 5%; right: 5%; bottom: 20px;">
-                            <p class="font-grey" style="padding-top:20px; font-size: 28px; line-height: 30px;" >An average PTA ballon requires up to 65<sup>◊</sup> stock units to cover a full size range. The Oscar PTA Ballon only needs 11.</p>
-                            <p class="font-grey" style="font-size: 20px; margin-top: 10px;"><sup>◊</sup>Compared to equivalent available sizes of Passeo<sup>®</sup>-14 and Passeo<sup>®</sup>-18 PTA balloons</p>
+                            <p class="font-grey" style="padding-top:20px; font-size: 22px; line-height: 28px;" >An average PTA ballon requires up to 65<sup>◊</sup> stock units to cover a full size range. The Oscar PTA Ballon only needs 11.</p>
+                            <p class="font-grey" style="font-size: 18px; margin-top: 10px;"><sup>◊</sup>Compared to equivalent available sizes of Passeo<sup>®</sup>-14 and Passeo<sup>®</sup>-18 PTA balloons</p>
                         </div>
                     </div>
                 </div>
@@ -30,6 +30,7 @@
   </template>
   
   <style scoped>
+
 
     .solution-wrapper {
         overflow: hidden;
@@ -78,13 +79,12 @@
         display: flex;
         justify-content: center;
         overflow: hidden;
-        /* display: flex; */
     }
     #chartLottie2 {
-        height: 26%;
+        height: 21%;
         position: absolute;
         top: 8vh;
-        right: 4vw;
+        right: 20px;
     }
   </style>
   
@@ -100,15 +100,36 @@
     data() {
       return {
         loading: false,
-        loaded: false
+        loaded: false,
+        scrolling : {
+          enabled: true,
+          events: "scroll,wheel".split(","),
+          prevent: e => e.preventDefault(),			
+        }
       };
     },
+    computed:{
+		isNavClicked(){
+			return this.$store.state.isNavClicked
+		},
+	},
     mounted() {
-        const panels = gsap.utils.toArray("#solution-section .solution-section-item");
-        let panelsContainer = document.querySelector("#solution-section")
-        let playhead = {frame: 0}
-        let playhead1 = {frame: 0}
-        // this.chartLottieScrollTrigger()
+        const section = gsap.utils.toArray('#solution-section')[0]
+			ScrollTrigger.create({
+				trigger: section,
+				start: "top bottom-=1",
+				end: "top top",
+				onEnter: () => this.goToSection(section),				
+			});
+
+        const section1 = gsap.utils.toArray('#solution2-section')[0]
+			ScrollTrigger.create({
+				trigger: section1,
+				start: "top bottom-=2400",
+				onEnter: () => this.goToSection(section1),
+				
+			});
+
         const animation3 = lottie.loadAnimation({
                 container: gsap.utils.toArray("#chartLottie")[0],
                 renderer: "svg",
@@ -130,10 +151,10 @@
         gsap.timeline({
             scrollTrigger: {
                 trigger: '#solution-section',
-                start: 'center center',
+                start: 'top top',
                 scrub: 0.2,
                 pin: true,
-                end: '+=4000'
+                end: '+=2400'
             }
         })
         .to('.solution .solution-box-1', {scale: 0.6, duration: 3})
@@ -143,51 +164,45 @@
         gsap.timeline({
             scrollTrigger: {
                 trigger: '#solution2-section',
-                start: 'center center',
+                start: 'center 60%',
                 scrub: true,
-                pin: true,
-                end: '+=1000'
+                end: '+=1000',
+                onEnter: ()=> {
+                    animation2.stop()
+                    animation2.play()
+                    animation3.stop()
+                    animation3.play()
+                }
             }
         })
-        .add('lottie')
-        .to(playhead, {
-            frame: 58,
-            duration: 3,
-            onUpdate: (a,b,c) => {
-                animation3.goToAndStop(playhead.frame, true)
-            },
-        },'lottie')
-        .to(playhead1, {
-            frame: 59,
-            duration: 3,
-            onUpdate: (a,b,c) => {
-                animation2.goToAndStop(playhead1.frame, true)
-            },
-        },'lottie')
     },
     components: {
     },
     methods: {
-        goToSection (top) {
-        let observer = ScrollTrigger.normalizeScroll(true);
-        console.log('goTo', top);
-        this.scrollTween = gsap.to(window, {
-            scrollTo: {y: top, autoKill: false},
-            ease: "strong.inOut",
-            duration: 1,
-            onStart: () => {
-            observer.disable(); // for touch devices, as soon as we start forcing scroll it should stop any current touch-scrolling, so we just disable() and enable() the normalizeScroll observer
-            observer.enable();
+        goToSection(section, anim, i) {
+            if (this.scrolling.enabled && !this.isNavClicked) { // skip if a scroll tween is in progress
+                this.disable();
+                gsap.to(window, {
+                scrollTo: {y: section, autoKill: false},
+                onComplete: this.enable,
+                duration: 1
+                });
+            }
+        },
+        disable() {
+            if (this.scrolling.enabled) {
+                this.scrolling.enabled = false;
+                window.addEventListener("scroll", gsap.ticker.tick, {passive: true});
+                this.scrolling.events.forEach((e, i) => (i ? document : window).addEventListener(e, this.scrolling.prevent, {passive: false}));
+            }
             },
-            onComplete: () => this.scrollTween = null,
-            overwrite: true
-        });
-        },
-        getTopPosition (el, idx) {
-            // return (idx - 1) * window.innerHeight;
-            // if (el.parentElement.classList.contains('pin-spacer')) return el.parentElement.getBoundingClientRect().top + window.scrollY;
-            return el.getBoundingClientRect().top + window.scrollY;
-        },
+        enable() {
+            if (!this.scrolling.enabled) {
+                this.scrolling.enabled = true;
+                window.removeEventListener("scroll", gsap.ticker.tick);
+                this.scrolling.events.forEach((e, i) => (i ? document : window).removeEventListener(e, this.scrolling.prevent));
+            }
+        }  
     }
     
   };

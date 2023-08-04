@@ -13,7 +13,7 @@
           <p class="text-white text-center oscar2-text font-din-medium" >One solution.</p>
           <p class="text-white text-center oscar2-text font-din-medium" >Multiple functions.</p>
           <p class="text-white text-center oscar2-text font-din-medium" >No compromise</p>
-          <p style="color: #CDCDCD;" class="text-center mt-5" >Achieve more with less. Optimize your <br>stock management and simplify your <br>procedural flow</p>
+          <p style="color: #CDCDCD;" class="text-center mt-5 oscar2-text-sub" >Achieve more with less. Optimize your <br>stock management and simplify your <br>procedural flow</p>
         </div>
         <div style="width: 30%;">
           <div class="flex justify-center mb-5">
@@ -22,7 +22,7 @@
           <p class="text-white text-center oscar2-text font-din-medium" >Lesion-specific</p>
           <p class="text-white text-center oscar2-text font-din-medium" >angioplasty with</p>
           <p class="text-white text-center oscar2-text font-din-medium" >length-adjustable balloon</p>
-          <p style="color: #CDCDCD;" class="text-center mt-5" >Customize your angioplasty <br>by matching ballon exactly<br> to lesion length</p>
+          <p style="color: #CDCDCD;" class="text-center mt-5 oscar2-text-sub" >Customize your angioplasty <br>by matching ballon exactly<br> to lesion length</p>
         </div>
         <div style="width: 30%;">
           <div class="flex justify-center mb-5">
@@ -31,7 +31,7 @@
           <p class="text-white text-center oscar2-text font-din-medium" >User-adjustable guide</p>
           <p class="text-white text-center oscar2-text font-din-medium" >wire support for</p>
           <p class="text-white text-center oscar2-text font-din-medium" >pushability or flexibility</p>
-          <p style="color: #CDCDCD;" class="text-center mt-5" >User adjustable guide wire <br>support so you can choose the <br>pushability and flexibility you need</p>
+          <p style="color: #CDCDCD;" class="text-center mt-5 oscar2-text-sub" >User adjustable guide wire <br>support so you can choose the <br>pushability and flexibility you need</p>
         </div>
       </div>
       <div style="margin-top: 120px; padding-bottom: 200px;">
@@ -69,6 +69,10 @@
   .oscar2-text {
     font-size: 30px;
     line-height: 31px;
+  }
+  .oscar2-text-sub {
+    font-size: 18px;
+    line-height: 20px;
   }
 
   @media screen and (max-width: 1300px) {
@@ -122,7 +126,6 @@ export default {
 				start: "top bottom-=1",
 				end: "bottom top+=1",
 				onEnter: () => this.goToSection(section),
-				onEnterBack: () => this.goToSection(section)
 			});
 
     gsap.timeline({

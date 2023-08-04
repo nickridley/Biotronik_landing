@@ -8,7 +8,7 @@
       >
         <div>
           <div class="contact-form">
-            <p class="mb-4" style="font-size: 30px; color: white;">Contact</p>
+            <p class="mb-4 font-din-light" style="font-size: 30px; color: white;">Contact</p>
             <div class="grid grid-cols-1 gap-4">
                 <div class="flex">
                   <input class="oscar-input" placeholder="Job Title"/>
@@ -45,7 +45,7 @@
             <p style="color: white;" class="mb-4">Your information will be processed in accordance with our <u>privacy statement</u>. Please note that you can withdraw your consent at any 
             time by sending a message to to marketing.vi@biotronik.com or by using the unsubscribe option in our e-mails</p>
             <div class="grid grid-cols-1 gap-4 mb-4">
-                <button class="request-btn col-span-1">Submit</button>
+                <button class="request-btn col-span-1 font-din-medium">Submit</button>
             </div>   
             <div class="mt-10">
               <p style="color: white;font-size: 10px;">1. per IFU: Indicated for percutaneous transluminal interventions in the peripheral 
@@ -95,7 +95,7 @@
         position: absolute;
     }
     .contact-wrapper {
-      padding-top: 30px;
+      padding-top: 100px;
       background: linear-gradient(to right, #EF5923, #ec6926, #EF5923);
     }
     .loading-page {
@@ -145,22 +145,60 @@
   
     data() {
       return {
-       
+        scrolling : {
+          enabled: true,
+          events: "scroll,wheel".split(","),
+          prevent: e => e.preventDefault(),			
+        },
         loading: false,
-        loaded: false
       };
     },
+    computed:{
+      isNavClicked(){
+        return this.$store.state.isNavClicked
+      },
+    },
     mounted() {
-      setTimeout(() => {
-        this.loaded = true;
-      }, 100)
+      const section = gsap.utils.toArray('#contactus-wrapper')[0]
+			ScrollTrigger.create({
+				trigger: section,
+				start: "top bottom-=1",
+				end: "bottom top+=1",
+				onEnter: () => this.goToSection(section),
+				
+			});
     },
     
     watch: {
   
     },
     methods: {
-  
+      goToSection(section, anim, i) {
+				if (this.scrolling.enabled && !this.isNavClicked) { // skip if a scroll tween is in progress
+					this.disable();
+					gsap.to(window, {
+						scrollTo: {y: section, autoKill: false},
+						onComplete: this.enable,
+						duration: 1
+					});
+
+					// anim && anim.restart();
+				}
+			},
+			disable() {
+				if (this.scrolling.enabled) {
+					this.scrolling.enabled = false;
+					window.addEventListener("scroll", gsap.ticker.tick, {passive: true});
+					this.scrolling.events.forEach((e, i) => (i ? document : window).addEventListener(e, this.scrolling.prevent, {passive: false}));
+				}
+			},
+			enable() {
+				if (!this.scrolling.enabled) {
+					this.scrolling.enabled = true;
+					window.removeEventListener("scroll", gsap.ticker.tick);
+					this.scrolling.events.forEach((e, i) => (i ? document : window).removeEventListener(e, this.scrolling.prevent));
+				}
+			}
     }
   
     

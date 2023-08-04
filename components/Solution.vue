@@ -12,8 +12,8 @@
                 </div>
             </div>
             <div class="solution-section-item solution-section-2">
-                <div class="solution2-container" >
-                    <div class="flex" style="width: 100%;">
+                <div class="solution2-container">
+                    <div class="flex" style="width: 100%; padding-top: 60px;">
                         <div class="flex justify-center" style="width: 50%;">
                             <div id="chartLottie" class="lottie-wrapper" ref="chart" style="width: 75%;"></div>
                         </div>
@@ -21,7 +21,7 @@
                             <div id="chartLottie2" class="lottie-wrapper2" ref="dial" style=""></div>
                             <div class="solution-text">
                                 <p class="font-grey solution-text-1" style="padding-top: 30px; padding-left: 50px; font-size: 35px; border: solid 1px; border-width: 1px 0 0 0;" >An average PTA balloon requires<br> up to 65 stock units to cover a full<br> size range. The Oscar PTA Ballon<br> only needs 11.</p>
-                                <p class="font-grey solution-text-2" style=" padding-top: 30px; padding-left: 50px; margin-top: 80px;"><sup>◊</sup>Compared to equivalent available sizes of Passeo<sup>®</sup>-14 and Passeo<sup>®</sup>-18 PTA balloons</p>
+                                <p class="font-grey solution-text-2" style=" padding-bottom: 30px; padding-left: 50px;"><sup>◊</sup>Compared to equivalent available sizes of Passeo<sup>®</sup>-14 and Passeo<sup>®</sup>-18 PTA balloons</p>
                             </div>
                         </div>
                         <div class="delay-temp" style="opacity: 0; top: 0; position: absolute;">
@@ -56,6 +56,10 @@
     }
     .solution-text-1, .solution-text-2 {
         opacity: 0;
+    }
+    .solution-text-2 {
+        position: absolute;
+        bottom: 15px;
     }
 
     .solution-section-item {
@@ -170,6 +174,8 @@
             xPercent: -100 * ( panels.length - 1 ),
             duration: 10,
             onComplete: ()=> {
+                animation3.stop();
+                animation2.stop();
                 animation3.play();
                 animation2.play();
                 gsap.to('.solution-text', {marginTop: 0, duration: 2}).play()

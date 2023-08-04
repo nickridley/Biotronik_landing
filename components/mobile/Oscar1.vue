@@ -5,8 +5,8 @@
         <cancelSVG style="height: 36px;" @click="isShowModal = false"></cancelSVG>
         <logoSVG></logoSVG>
       </div>
-      <p class="font-orange font-bold my-4" style="font-size: 20px; margin: 0;">Get in touch to learn more</p>
-      <p class="my-4 font-grey mb-3" style="font-size: 14px; font-weight: bold; margin: 0;" >By providing your contact details, you agree that our local BIOTRONIK sales organization will follow-up with you via e-mail.</p>
+      <p class="font-orange font-din-medium my-4" style="font-size: 20px; margin: 0;">Get in touch to learn more</p>
+      <p class="my-4 font-grey mb-3" style="font-size: 14px; margin: 0;" >By providing your contact details, you agree that our local BIOTRONIK sales organization will follow-up with you via e-mail.</p>
       <div class="grid grid-cols-1 gap-2 mt-3">
         <div class="col-span-1">
           <div class="flex">
@@ -53,14 +53,14 @@
         </div>
         <div :class="'oscar1-content' + (loaded ? ' show' : '')">
           <div :class="'oscar-texts'" >
-            <div class="flex">
+            <div class="flex font-din-medium">
               <p class="text-white" style="font-size: 60px; line-height: 60px;">Oscar</p>
               <p class="text-white" style="font-size: 20px; padding-top: 5px">®</p>
             </div>
-            <p class="text-white" style="font-size: 22px;">One Solution: Cross. Adjust. Restore.</p>
-            <p class="text-white" style="font-size: 30px; line-height: 30px; position: relative;">The all-in-one solution to reach, cross and prepare lesions<span class="text-white" style="padding-top: 5px; font-size: 16px;position: absolute;bottom: 3px;left: 93px;">1</span></p>           
+            <p class="text-white" style="font-size: 20px;"><span class="font-din-medium">O</span>ne <span class="font-din-medium">S</span>olution: <span class="font-din-medium">C</span>ross. <span class="font-din-medium">A</span>djust. <span class="font-din-medium">R</span>estore.</p>
+            <p class="text-white font-din-light" style="font-size: 30px; line-height: 32px; position: relative;">The all-in-one solution to reach, cross and prepare lesions<span class="text-white" style="padding-top: 5px; font-size: 16px;position: absolute;bottom: 3px;left: 93px;">1</span></p>           
           </div>
-          <button class="my-6 more-btn" @click="isShowModal = true"><b>Learn more</b></button>
+          <button class="my-6 more-btn font-din-medium" @click="isShowModal = true">Learn more</button>
 
         </div>
       </div>
@@ -101,9 +101,6 @@
   } 
   .oscar-input::placeholder {
       color: #f37453;
-  }
-  .oscar-texts {
-    
   }
   .more-btn {
     background-color: white;
@@ -205,6 +202,11 @@ export default {
       loaded: false
     };
   },
+  computed:{
+		isNavClicked(){
+			return this.$store.state.isNavClicked
+		},
+	},
   mounted() {
     setTimeout(() => {
       this.loaded = true;

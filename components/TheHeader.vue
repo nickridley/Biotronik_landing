@@ -6,6 +6,7 @@
     >
         <div class="nav-btn" @click="onClickToggle()" v-if="isOpen == false">
           ≡
+          <!-- <img src="../assets/img/btn-close.png" style="height: 16px;" /> -->
         </div>
         <div class="nav-btn-clicked" @click="onClickCancel()" v-if="isOpen == true" style="width: 35px;">
           <cancelSVG></cancelSVG>
@@ -44,7 +45,7 @@
       </div>
     </div>
       <div id="mobile-navbar" class="mobile-menu">
-        <div class="w-full">
+        <div class="w-full font-din-medium">
           <div class="mobile-menu-item"><a style="display: flex;" class="br-item" @click="closeTabletContactModal('oscar-wrapper')">OSCAR</a></div>
           <div class="mobile-menu-item"><a class="br-item" @click="closeTabletContactModal('solution-wrapper')">ONE SOLUTION</a></div>
           <div class="mobile-menu-item"><a class="br-item" @click="closeTabletContactModal('cross-wrapper')">CROSS</a></div>
@@ -144,12 +145,15 @@ export default {
     },
     closeTabletContactModal(id) {
       this.isOpen=false
+      this.$store.dispatch('setNavClicked', true)
       document.getElementById('mobile-navbar').style.display='none'
       window.scrollBy(0, document.getElementById('restore-wrapper').offsetTop)
       gsap.to(window, {
         duration: 1,
         scrollTo: { y: "#" + id, offsetY: 0 }
-      });
+      }).then(() => {
+        this.$store.dispatch('setNavClicked', false)
+      })
     },
     onClickToggle() {
       this.isOpen=true; 
@@ -230,7 +234,7 @@ export default {
   cursor: pointer;
 }
 .br-item.clicked {
-  color: orange;
+  color: #F04E23;
 }
 
 .header-item.clicked {

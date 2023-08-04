@@ -3,6 +3,7 @@
       <div v-if="loading" class="loading-page">
         <div class="loading"></div>
       </div>
+      <div style="position: absolute; top: 0; left: 0; right: 0; background-color: black; height: 75px;"></div>
       <div
         class="mx-auto items-center container-fluid"
       >
@@ -104,6 +105,7 @@
         overflow: hidden; 
         position: relative;
         padding-bottom: 30px;
+        padding-top: 75px;
     }
     .loading-page {
       position: fixed;
@@ -152,23 +154,57 @@
   
     data() {
       return {
-       
-        loading: false,
-        loaded: false
+        scrolling : {
+          enabled: true,
+          events: "scroll,wheel".split(","),
+          prevent: e => e.preventDefault(),			
+        },
       };
     },
+    computed:{
+      isNavClicked(){
+        return this.$store.state.isNavClicked
+      },
+    },
     mounted() {
-      setTimeout(() => {
-        this.loaded = true;
-      }, 100)
+      const section = gsap.utils.toArray('#contactus-wrapper')[0]
+			ScrollTrigger.create({
+				trigger: section,
+				start: "top bottom-=1",
+				end: "bottom top+=1",
+				onEnter: () => this.goToSection(section),
+				
+			});
     },
     
-    watch: {
-  
-    },
     methods: {
-  
-    }
+			goToSection(section, anim, i) {
+				if (this.scrolling.enabled && !this.isNavClicked) { // skip if a scroll tween is in progress
+					this.disable();
+					gsap.to(window, {
+						scrollTo: {y: section, autoKill: false},
+						onComplete: this.enable,
+						duration: 1
+					});
+
+					// anim && anim.restart();
+				}
+			},
+			disable() {
+				if (this.scrolling.enabled) {
+					this.scrolling.enabled = false;
+					window.addEventListener("scroll", gsap.ticker.tick, {passive: true});
+					this.scrolling.events.forEach((e, i) => (i ? document : window).addEventListener(e, this.scrolling.prevent, {passive: false}));
+				}
+			},
+			enable() {
+				if (!this.scrolling.enabled) {
+					this.scrolling.enabled = true;
+					window.removeEventListener("scroll", gsap.ticker.tick);
+					this.scrolling.events.forEach((e, i) => (i ? document : window).removeEventListener(e, this.scrolling.prevent));
+				}
+			}
+		}
   
     
   };

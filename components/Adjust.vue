@@ -32,7 +32,7 @@
 				<div class="first-marker-content flex" style="align-items: end;">
 					Metal ring on support<br/>
 					catheter aids visualization<br/>
-					ad resists tip deformation<p style="font-size: 13px; margin-bottom: 8px;">2</p>
+					and resists tip deformation<p style="font-size: 13px; margin-bottom: 8px;">2</p>
 				</div>
 			</div>
 			<div class="second-marker">
@@ -45,7 +45,7 @@
 				</div>
 			</div>
 			<div class="third-marker">
-				<p>*Balloon 7 mm has 2 markers, one distal and one at 50 mm</p>
+				<p>*Balloon ø 7 mm has 2 markers, one distal and one at 50 mm</p>
 			</div>
 			<div id="adjust-content" class="adjust-content">
 
@@ -109,7 +109,7 @@
 		left: 10vw;
 		position: absolute;
 		color: white;
-		width: 50vw;
+		width: 80vw;
 		bottom: 12vh;
 		opacity: 0;
 	}
@@ -258,6 +258,11 @@ export default {
 	mounted() {       
 		let playhead = {frame: 0}
 		let playhead1 = {frame: 0}
+
+		gsap.timeline({repeat: 1000})
+		.to('#img-slider', {opacity: 0.3, duration: 0.8})
+		.to('#img-slider', {opacity: 1, duration: 0.8})
+		
 		const animation3 = lottie.loadAnimation({
                 container: gsap.utils.toArray("#adjust-content")[0],
                 renderer: "svg",
@@ -271,8 +276,7 @@ export default {
 			trigger: section,
 			start: "top bottom-=1",
 			end: "bottom top+=1",
-			onEnter: () => this.goToSection(section),
-			onEnterBack: () => this.goToSection(section)
+			onEnter: () => this.goToSection(section)
 		});
 
 		gsap.timeline({
@@ -313,8 +317,10 @@ export default {
 		.to(".third-marker", {opacity:0, left: 0,  duration: 6, delay: 10}, "ballonmove-2")
 		.to(".img-ballon", {top: '20%', width: '115vw', height: '16vw', duration: 6, x: 0, delay:10, opacity: 1}, "ballonmove-2")
 		.to(".adjust-content", {opacity:1, duration: 3, onComplete: ()=> {
+			animation3.stop()
 			animation3.play()
 		}})
+		.to(".temp", {x: '-200vh', duration: 10})
 
 		Draggable.create('#img-slider', {
 			type: 'x',
@@ -349,8 +355,6 @@ export default {
 					onComplete: this.enable,
 					duration: 1
 				});
-
-				// anim && anim.restart();
 			}
 		},
 		disable() {

@@ -57,7 +57,7 @@ export default {
 html {
   /* font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif; */
-  font-family: 'DINPro Regular';
+  font-family: 'DINPro Regular' !important;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -74,12 +74,12 @@ html {
   color: #6E6E6E;
 }
 .font-bold {
-  font-weight: bold;;
+  font-weight: bold;
 }
 
 .cross-section1 {
 		position: fixed;
-		top: 0;
+		top: 74px;
 		height: 140vh;
 		z-index: 200;
 		left: 0;

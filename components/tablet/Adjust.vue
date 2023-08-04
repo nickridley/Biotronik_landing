@@ -1,11 +1,11 @@
 <template>
 	<div style="position: relative;" id="adjust-wrapper">
-		<div class="cross-right-5">
+		<div class="cross-right-5 right-section">
 			<div class="cross-right-rest p-4 color-gray">
-				<p class="font-orange" style="font-size: 30px; border-top: 2px solid #ED6C23; display: table;"><b>Achieve the pushability of an 0.035"</b></p>
-				<p class="font-orange" style="font-size: 30px;"><b>system on an 0.018" platform*</b></p>
+				<p class="font-orange font-din-medium" style="font-size: 30px; border-top: 2px solid #ED6C23; display: table;">Achieve the pushability of an 0.035"</p>
+				<p class="font-orange font-din-medium" style="font-size: 30px;">system on an 0.018" platform*</p>
 				<div style="margin-top: 70px;">
-					<p style="border-bottom: 2px solid grey;">Oscar Variale Pushability</p>
+					<p class="font-din-medium" style="border-bottom: 2px solid grey;">Oscar Variale Pushability</p>
 					<div class="grid grid-cols-3 gap-4 pr-4">
 						<div class="col-span-1">
 							<p class="mt-4" style="color: #ED6C23;">Oscar, 0.018" <br>BIOTRONIK</p>
@@ -34,7 +34,7 @@
 				</div>
 			</div>
 			<div class="adjust-header" style="background-color: black;">
-				<div class="pta-text">
+				<div class="pta-text font-din-medium">
 					<p class="pta-text-1">Customize your angioplasty to accurately<br> match the ballon length to lesion length</p>
 					<p class="pta-text-2">The uniques solution allows in-vessel<br> adjustments of the ballon length from 20<br> to 180 mm, designed to dialte various<br> lesion lengths or focal residual stenosis<br> with the same balloon</p>
 				</div>
@@ -55,10 +55,10 @@
 								</div>
 								<div class="p-6" style="background-color: black; color: white; position: relative; height: 300px;">
 									<div id="standard-text" style="position: absolute;">
-										<p style="font-weight: bold; font-size: 18px;">Standard PTA Balloon</p>
+										<p class="font-din-medium" style="font-size: 18px;">Standard PTA Balloon</p>
 										<p>Unable to exactly match the length of the <br>lesion, potentially damaging healthy parts<br>of the vessel once inflated</p>
 									</div>
-									<div id="restore-text" style="font-size: 18px; line-height: 20px; color: #f04e23; position: absolute; opacity: 0;">
+									<div id="restore-text" class="font-din-medium" style="font-size: 18px; line-height: 20px; color: #f04e23; position: absolute; opacity: 0;">
 										<p>Adjust</p>
 										<p>Oscar PTA Balloon</p>
 										<p>Unique adjustable length balloon able to<br>exactly match the length of the lesion</p>
@@ -81,11 +81,11 @@
 		</div>
 
 		
-		<div class="metal-section">
+		<div id="metal-section" class="metal-section">
 			<img class="img-ballon" src="../../assets/img/adjust/vertical_balloon.png" style="width: 77px;" />
 			<div class="first-marker">
 				<div class="first-marker-arrow"></div>
-				<p class="first-marker-title">Proximal marker</p>
+				<p class="first-marker-title font-din-medium">Proximal marker</p>
 				<div class="first-marker-content flex" style="align-items: end;">
 					Metal ring on support<br/>
 					catheter aids visualization<br/>
@@ -94,7 +94,7 @@
 			</div>
 			<div class="second-marker">
 				<div class="second-marker-arrow"></div>
-				<div class="second-marker-title" style="margin-right: 71px;">Balloon markers</div>
+				<div class="second-marker-title font-din-medium" style="margin-right: 71px;">Balloon markers</div>
 				<div class="second-marker-content flex" style="align-items: end;">
 					Markers on distal balloon shoulder<br/>
 					and every 60 mm aid accurate<br/>
@@ -296,29 +296,49 @@ export default {
 	components: { adjustSVG, restoreSVG },
 
 	data() {
-			return {
-			};
+		return {
+			scrolling : {
+				enabled: true,
+				events: "scroll,wheel".split(","),
+				prevent: e => e.preventDefault(),			
+			},
+		};
+	},
+	computed:{
+		isNavClicked(){
+			return this.$store.state.isNavClicked
+		},
 	},
 	mounted() {         
-		let playhead1 = {frame: 0}
+		gsap.timeline({repeat: 1000})
+		.to('#img-slider', {opacity: 0.3, duration: 0.8})
+		.to('#img-slider', {opacity: 1, duration: 0.8})
+
+
+		const section1 = gsap.utils.toArray('#metal-section')[0]
+		ScrollTrigger.create({
+			trigger: section1,
+			start: "top bottom-=1",
+			end: "bottom top+=1",
+			onEnter: () => this.goToSection(section1),
+			
+		});
+
+		const section2 = gsap.utils.toArray('#adjust-chart')[0]
+		ScrollTrigger.create({
+			trigger: section2,
+			start: "top bottom-=1",
+			end: "bottom top+=1",
+			onEnter: () => this.goToSection(section2),
+			
+		});
+
 		var parentSliderW = document.getElementById('img-adjust').parentElement.clientWidth
 		document.getElementById('img-slider').style.transform = `translateX(${parentSliderW*0.93*0.85}px)`
 		let style =  window.getComputedStyle(document.getElementById('img-slider'));
 		var transformX = new WebKitCSSMatrix(style.transform).m41;
 		var parentW = document.getElementById('img-adjust').parentElement.clientWidth
 		document.getElementById('img-adjust').style.marginRight = `${parentW-0.11*parentW-transformX}px`
-
-
-		// gsap.timeline({
-		// 	scrollTrigger: {
-		// 		trigger: '.adjust-header',
-		// 		start: 'top bottom',
-		// 		end: 'top top',
-		// 		scrub: true,
-		// 	}
-		// })
-		// .to('.adjust-header', {opacity: 1})
-
 
 		Draggable.create('#img-slider', {
 			type: 'x',
@@ -347,19 +367,41 @@ export default {
 		gsap.timeline({
 			scrollTrigger: {
 				trigger: '#adjust-chart',
-				start: 'center center',
+				start: 'top 5%',
 				end: '+=2000',
 				scrub: true,
-				pin: true,
+				onEnter: ()=> {
+					animation3.stop();
+					animation3.play();
+				}
 			}
 		})
-		.to(playhead1, {
-            frame: 148,
-			duration: 26,
-            onUpdate: (a,b,c) => {
-                animation3.goToAndStop(playhead1.frame, true)
-            },
-        })
+	},
+	methods: {
+		goToSection(section, anim, i) {
+			if (this.scrolling.enabled && !this.isNavClicked) { // skip if a scroll tween is in progress
+				this.disable();
+				gsap.to(window, {
+					scrollTo: {y: section, autoKill: false},
+					onComplete: this.enable,
+					duration: 1
+				});
+			}
+		},
+		disable() {
+			if (this.scrolling.enabled) {
+				this.scrolling.enabled = false;
+				window.addEventListener("scroll", gsap.ticker.tick, {passive: true});
+				this.scrolling.events.forEach((e, i) => (i ? document : window).addEventListener(e, this.scrolling.prevent, {passive: false}));
+			}
+		},
+		enable() {
+			if (!this.scrolling.enabled) {
+				this.scrolling.enabled = true;
+				window.removeEventListener("scroll", gsap.ticker.tick);
+				this.scrolling.events.forEach((e, i) => (i ? document : window).removeEventListener(e, this.scrolling.prevent));
+			}
+		},
 	}
 };
 

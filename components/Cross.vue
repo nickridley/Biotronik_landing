@@ -11,11 +11,11 @@
 			<div class="cross-right" style="width: 60%;">
 				<div id="cross-right-1" class="cross-right-1 cross-right-item right-section">
 					<div class="cross-dilator">
-						<div style="display: table;">
+						<div style="display: table; margin-bottom: 50px;">
 							<p class="text-white cross-header font-din-medium">Support Catheter + Dilator</p>
 						</div>
-						<img src="../assets/img/cross/Lock grip 1.png" />
-						<div class="flex justify-center items-center mt-20 ">
+						<img src="../assets/img/cross/Lock grip 1.png" style="height: 40vh; width: 100%;" />
+						<div class="flex justify-center items-center mt-10 ">
 							<div>
 								<p class="cross-content font-din-medium">Easy-to-use Lock Grip</p>
 								<p class="cross-content">Seals and secures for accurate</p>
@@ -42,12 +42,13 @@
 					</div>
 				</div>
 				<div class="cross-right-3 cross-right-item right-section flex items-center">
-					<div class="cross-support-2" style="height: 100%; position: relative;">
+					<div class="cross-support-2" style="position: relative;">
+						<div style="width: 100%; background-color: #ef5823; height: 10px; position: absolute; top: 0vh;"></div>
 						<!-- <img src="../assets/img/cross/Braided support Cath X2.png" style="padding-left: 20px; height: 200px;" /> -->
-						<video id="cross-video" src="../assets/video/cross-video-desktop.mp4" style="width;: 100%" muted="true"></video>
-						<div class="flex justify-center items-center" style="padding-left: 30%;">
+						<video id="cross-video" src="../assets/video/cross-video-desktop.mp4" muted="true"></video>
+						<div class="flex justify-center items-center" style="padding-left: 30%; margin-top: -50px;">
 							<div>
-								<p class="text-white font-din-medium" style="font-size: 50px; line-height: 50px;">Cross</p>
+								<p class="text-white font-din-medium" style="font-size: 40px; line-height: 45px;">Cross</p>
 								<p class="text-white font-din-medium" style="font-size: 35px; line-height: 40px;">Braided Support Catheter</p>
 								<p class="text-white font-din-medium" style="font-size: 35px; line-height: 40px;">and Extendable Dilator</p>
 								<p class="text-white font-din-light" style="font-size: 35px;line-height: 40px;">Position Contrast:</p>
@@ -60,7 +61,7 @@
 				<div class="cross-right-4 right-section" style="position: relative; padding-top: 80px; min-height: 100vh; padding-bottom: 30px;">
 					<div class="cross-curved" style="width: 100%;">
 						<div class="flex justify-end items-center">
-							<img src="../assets/img/cross/curved.jpg" style="width: 80%; max-width: 758px; max-height: 57vh;"/>
+							<img src="../assets/img/cross/curved.jpg" style="object-fit: contain; max-width: 758px; max-height: 57vh;"/>
 						</div>
 						<div class="flex justify-start items-center" style="padding-left: 100px;">
 							<div>
@@ -68,7 +69,7 @@
 								<p class="font-grey font-din-medium" style="font-size: 35px; line-height: 38px;">Extended Dilator</p>
 								<p class="font-grey cross-4-content font-din-light" >Position Max Flex:</p>
 								<p class="font-grey cross-4-content font-din-light" >Most flexible support level</p>
-								<p class="font-grey cross-4-content font-din-light" >with fully extended dilator</p>
+								<p class="font-grey cross-4-content font-din-light" >with fully extended dilator°</p>
 							</div>
 						</div>
 						<div class="flex justify-end mt-6" style="padding-right: 40px;">
@@ -126,19 +127,12 @@
 		font-size: 30px;
 		line-height: 33px;
 	}
-	/* .cross-right {
-		overflow-y: scroll;
-		height: 100vh;
-		scroll-snap-type: mandatory;
-		scroll-snap-points-y: repeat(100vh);
-		scroll-snap-type: y mandatory;
-	} */
 	.cross-left {
 		position: relative;
 	}
 	.cross-section2 {
 		position: absolute;
-		top: 0;
+		top: 74px;
 		height: 140vh;
 		z-index: 200;
 		left: 0;
@@ -253,17 +247,13 @@
             });
 
 		const sections = gsap.utils.toArray('.right-section')
-		console.log('sections', sections)
 
 		sections.forEach((section, i) => {
-			// const intoAnim = gsap.from(section.querySelector(".right-col"), {yPercent: 50, duration: 1, paused: true});
-			console.log('section', section)
 			ScrollTrigger.create({
 				trigger: section,
 				start: "top bottom-=1",
 				end: "bottom top+=1",
 				onEnter: () => this.goToSection(section),
-				onEnterBack: () => this.goToSection(section)
 			});
 		});
 
@@ -351,14 +341,23 @@
 			scrollTrigger: {
 				trigger: '.cross-right-5',
 				start: 'top 10%',
-				end: 'bottom top',
 				scrub: true,
 				onEnter: () => {
+					animation3.stop()
 					animation3.play()
 				}
 			}
 		})
-		.to(".cross-section1", {top: '-200vh', duration: 1})
+
+		gsap.timeline({
+			scrollTrigger: {
+				trigger: '.cross-right-5',
+				start: 'top top',
+				end: '+=2000',
+				scrub: true,
+			}
+		})
+		.to(".cross-section1", {top: '-200vh', duration: 10})
     },
     
     watch: {

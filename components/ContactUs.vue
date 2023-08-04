@@ -178,7 +178,6 @@
 				start: "top bottom-=1",
 				end: "bottom top+=1",
 				onEnter: () => this.goToSection(section),
-				onEnterBack: () => this.goToSection(section)
 			});
     },
     

@@ -3,54 +3,66 @@
     <div
       class="mx-auto items-center container-fluid"
       style="width: 85%;"
+      id="oscar2-wrapper"
     >
       <div class="flex justify-between items-stretch oscar2-texts"  style="padding-top: 20px;">
         <div style="width: 30%;">
           <div class="flex justify-center mb-2">
             <img src="../../assets/img/oscar/One solution X2.png" width="160px" />
           </div>
-          <p class="text-white text-center" style="font-size: 18px; font-weight: bold; line-height: 20px;">One Solution.</p>
-          <p class="text-white text-center" style="font-size: 18px; font-weight: bold; line-height: 20px;">Multiple<br> functions.</p>
-          <p class="text-white text-center" style="font-size: 18px; font-weight: bold; line-height: 20px;">No compromise.</p>
+          <p class="text-white text-center font-din-medium" style="font-size: 20px; line-height: 22px;">
+            One Solution.<br/>
+            Multiple<br> functions.<br/>
+            No compromise.
+          </p>
           <p style="color: #CDCDCD; line-height: 17px;" class="text-center mt-2" >Achieve more with less. Optimize your stock<br>management and simplify<br> your procedural flow</p>
         </div>
         <div style="width: 30%;">
           <div class="flex justify-center mb-2">
             <img src="../../assets/img/oscar/Lesion-specific X2.png" width="160px" />
           </div>
-          <p class="text-white text-center" style="font-size: 18px; font-weight: bold; line-height: 20px;">Lesion-specific</p>
-          <p class="text-white text-center" style="font-size: 18px; font-weight: bold; line-height: 20px;">angioplasty with</p>
-          <p class="text-white text-center" style="font-size: 18px; font-weight: bold; line-height: 20px;">length-adjustable balloon</p>
+          <p class="text-white text-center font-din-medium" style="font-size: 20px; line-height: 22px;">
+            Lesion-specific<br/> 
+            angioplasty with<br/> 
+            length-adjustable<br/> 
+            balloon
+          </p>
           <p style="color: #CDCDCD; line-height: 17px;" class="text-center mt-2" >Customize your angioplasty <br>by matching ballon exactly<br> to lesion length</p>
         </div>
         <div style="width: 30%;">
           <div class="flex justify-center mb-2">
             <img src="../../assets/img/oscar/User-adjustable X2.png" width="160px" />
           </div>
-          <p class="text-white text-center" style="font-size: 18px; font-weight: bold; line-height: 20px;">User-adjustable</p>
-          <p class="text-white text-center" style="font-size: 18px; font-weight: bold; line-height: 20px;">guide wire support</p>
-          <p class="text-white text-center" style="font-size: 18px; font-weight: bold; line-height: 20px;">for pushability or flexibility</p>
+          <p class="text-white text-center font-din-medium" style="font-size: 20px; line-height: 22px;">
+            User-adjustable<br/>
+            guide wire support<br/>
+            for pushability or flexibility
+          </p>
           <p style="color: #CDCDCD; line-height: 17px;" class="text-center mt-2" >User adjustable guide wire <br>support so you can choose <br>the pushability and flexibility you need</p>
         </div>
       </div>
       <div style="margin-top: 14px; padding-bottom: 50px;">
-        <p class="text-white" style="font-size: 60px; font-weight: bold;">Oscar</p>
+        <p class="text-white font-din-medium" style="font-size: 74px;">Oscar</p>
         <p class="text-white" style="font-size: 40px; line-height: 40px;">One Solution:</p>
         <p class="text-white mb-5" style="font-size: 40px; line-height: 40px;">Multiple functions.</p>
-        <p class="text-white" style="font-size: 26px; line-height: 30px; color: #bfbfbf;">Simplify your approach to a complex</p>
-        <p class="text-white" style="font-size: 26px; line-height: 30px; color: #bfbfbf;">problem. Achieve versatility without</p>
-        <p class="text-white" style="font-size: 26px; line-height: 30px; color: #bfbfbf;">compromise. <span style="font-weight: bold; color: white;">Flexibility, pushability</span></p>
-        <p class="text-white" style="font-size: 26px; line-height: 30px; color: #bfbfbf;"><span style="font-weight: bold; color: white;">long or short balloons</span> - use a single</p>
-        <p class="text-white" style="font-size: 26px; line-height: 30px; color: #bfbfbf;">system with fully adjustable</p>
-        <p class="text-white" style="font-size: 26px; line-height: 30px; color: #bfbfbf;">components to cross and dilate</p>
-        <p class="text-white" style="font-size: 26px; line-height: 30px; color: #bfbfbf;">lesions exactly how you want to.</p>
+        <p class="text-white font-din-light" style="font-size: 38px; line-height: 42px; color: #bfbfbf;">
+          Simplify your approach to a complex<br/>
+          problem. Achieve versatility without<br/>
+          compromise. <span class="font-din-medium" style="color: white;">Flexibility, pushability</span><br/>
+          <span class="font-din-medium" style="color: white;">long or short balloons</span> - use a single<br/>
+          system with fully adjustabl<br/>
+          components to cross and dilate<br/>
+          lesions exactly how you want to.
+        </p>
       </div>
     </div>
   </div>
 </template>
 
 <style>
-
+  #oscar2-wrapper {
+    padding-top: 73px;
+  }
   .font-orange {
     color: #F25625; 
   }
@@ -79,13 +91,29 @@ export default {
 
   data() {
     return {
-     
+      scrolling : {
+          enabled: true,
+          events: "scroll,wheel".split(","),
+          prevent: e => e.preventDefault(),			
+        },
       loading: false,
       loaded: false
     };
   },
+  computed:{
+		isNavClicked(){
+			return this.$store.state.isNavClicked
+		},
+	},
   mounted() {
-
+    const section = gsap.utils.toArray('#oscar2-wrapper')[0]
+			ScrollTrigger.create({
+				trigger: section,
+				start: "top bottom-=1",
+				end: "bottom top+=1",
+				onEnter: () => this.goToSection(section),
+				
+			});
     gsap.timeline({
       scrollTrigger: {
         trigger: '.oscar2-texts',
@@ -98,13 +126,33 @@ export default {
     .to(".oscar2-texts", {opacity: 1})
    
   },
-  
-  watch: {
-
-  },
   methods: {
-   
-   
+    goToSection(section, anim, i) {
+      if (this.scrolling.enabled && !this.isNavClicked) { // skip if a scroll tween is in progress
+        this.disable();
+        gsap.to(window, {
+          scrollTo: {y: section, autoKill: false},
+          onComplete: this.enable,
+          duration: 1
+        });
+
+        // anim && anim.restart();
+      }
+    },
+    disable() {
+      if (this.scrolling.enabled) {
+        this.scrolling.enabled = false;
+        window.addEventListener("scroll", gsap.ticker.tick, {passive: true});
+        this.scrolling.events.forEach((e, i) => (i ? document : window).addEventListener(e, this.scrolling.prevent, {passive: false}));
+      }
+    },
+    enable() {
+      if (!this.scrolling.enabled) {
+        this.scrolling.enabled = true;
+        window.removeEventListener("scroll", gsap.ticker.tick);
+        this.scrolling.events.forEach((e, i) => (i ? document : window).removeEventListener(e, this.scrolling.prevent));
+      }
+    }  
   }
 
   

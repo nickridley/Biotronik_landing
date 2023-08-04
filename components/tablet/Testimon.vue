@@ -2,20 +2,20 @@
 	<div class="testimon-wrapper" id="test-wrapper">
 		<h1>Take their word for it</h1>
 		<div class="testimon-video">
-			<iframe id="main-video"  src="https://www.youtube.com/embed/0MqLI3B4fs4" style="max-height: 40vh; height: 36vh; width: 100%;" controls></iframe>
+			<iframe id="main-video"  src="https://www.youtube.com/embed/nd4xzySY7co" style="max-height: 40vh; height: 36vh; width: 100%;" controls></iframe>
 		</div>
 		<div style="padding-left: 5%; padding-right: 5%;">
 			<div class="flex justify-between align-center" style="margin-top: 10px;">
 				<p class="testimon-subtitle">PHYSICIAN TESTIMONIAL</p>
 				<p class="testimon-date">01/08/23</p>
 			</div>
-			<p class="testimon-content">How does Oscar change the way to approach your procedures?</p>
+			<p id="testimon-content" class="testimon-content">Have you Met Oscar</p>
 		</div>
 		<div class="carousel-section">
 			<agile :options="options">
 					<div class="slide-item">
-						<div class="slide" @click="(e)=>onClickVideo(e, 0)">
-							<iframe style="pointer-events:none !important; width: 100%;" class="carousel-video" src="https://www.youtube.com/embed/0MqLI3B4fs4" ></iframe>
+						<div class="slide" @click="(e)=>onClickVideo(e, 0, 'Have you Met Oscar')">
+							<iframe style="pointer-events:none !important; width: 100%;" class="carousel-video" src="https://www.youtube.com/embed/nd4xzySY7co" ></iframe>
 							<div class="playing-mask" v-if="videoNo == 0">
 								<div>
 									<div style="display: flex; justify-content: center; height: 40px;"><triangleSVG style="height: 100%;"></triangleSVG></div>
@@ -23,15 +23,15 @@
 								</div>
 							</div>
 						</div>
-						<p class="mt-3" style="line-height: 17px; ">How does Oscar change the way to approach your procedures?</p>
+						<p class="mt-3" style="line-height: 17px; height: 51px;">Have you Met Oscar</p>
 						<div class="flex mt-2" style="color: #7C8082">
 							<p class="mr-3">4:32</p>
 							<p>01/08/23</p>
 						</div>
 					</div>
 					<div class="slide-item">
-						<div class="slide" @click="(e)=>onClickVideo(e, 1)">
-							<iframe style="pointer-events:none !important; width: 100%;" class="carousel-video" src="https://www.youtube.com/embed/0MqLI3B4fs4" ></iframe>
+						<div class="slide" @click="(e)=>onClickVideo(e, 1, 'Oscar Walker Video')">
+							<iframe style="pointer-events:none !important; width: 100%;" class="carousel-video" src="https://www.youtube.com/embed/oUsS8cUbLC0" ></iframe>
 							<div class="playing-mask" v-if="videoNo == 1">
 								<div>
 									<div style="display: flex; justify-content: center; height: 40px;"><triangleSVG style="height: 100%;"></triangleSVG></div>
@@ -39,15 +39,15 @@
 								</div>
 							</div>
 						</div>
-						<p class="mt-3" style="line-height: 17px; ">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+						<p class="mt-3" style="line-height: 17px; height: 51px;">Oscar Walker Video</p>
 						<div class="flex mt-2" style="color: #7C8082">
 							<p class="mr-3">4:32</p>
 							<p>01/08/23</p>
 						</div>
 					</div>
 					<div class="slide-item">
-						<div class="slide" @click="(e)=>onClickVideo(e, 2)">
-							<iframe style="pointer-events:none !important; width: 100%;" class="carousel-video" src="https://www.youtube.com/embed/0MqLI3B4fs4" ></iframe>
+						<div class="slide" @click="(e)=>onClickVideo(e, 2, 'Oscar Beasley Video')">
+							<iframe style="pointer-events:none !important; width: 100%;" class="carousel-video" src="https://www.youtube.com/embed/eQaPnnaLA80" ></iframe>
 							<div class="playing-mask" v-if="videoNo == 2">
 								<div>
 									<div style="display: flex; justify-content: center; height: 40px;"><triangleSVG style="height: 100%;"></triangleSVG></div>
@@ -55,7 +55,39 @@
 								</div>
 							</div>
 						</div>
-						<p class="mt-3" style="line-height: 17px; ">Proin mattis dolor enim, eget bibendum est feugiat non.</p>
+						<p class="mt-3" style="line-height: 17px; height: 51px;">Oscar Beasley Video</p>
+						<div class="flex mt-2" style="color: #7C8082">
+							<p class="mr-3">4:32</p>
+							<p>01/08/23</p>
+						</div>
+					</div>
+					<div class="slide-item">
+						<div class="slide" @click="(e)=>onClickVideo(e, 3, 'Oscar Shneider Video')">
+							<iframe style="pointer-events:none !important; width: 100%;" class="carousel-video" src="https://www.youtube.com/embed/UOmsW2UyI4k" ></iframe>
+							<div class="playing-mask" v-if="videoNo == 3">
+								<div>
+									<div style="display: flex; justify-content: center; height: 40px;"><triangleSVG style="height: 100%;"></triangleSVG></div>
+									<p style="color: #F04E23; font-size: 12px;">NOW PLAYING</p>
+								</div>
+							</div>
+						</div>
+						<p class="mt-3" style="line-height: 17px; height: 51px;">Oscar Shneider Video</p>
+						<div class="flex mt-2" style="color: #7C8082">
+							<p class="mr-3">4:32</p>
+							<p>01/08/23</p>
+						</div>
+					</div>
+					<div class="slide-item">
+						<div class="slide" @click="(e)=>onClickVideo(e, 4, 'Oscar Pena Video')">
+							<iframe style="pointer-events:none !important; width: 100%;" class="carousel-video" src="https://www.youtube.com/embed/z_L1QO4izlA" ></iframe>
+							<div class="playing-mask" v-if="videoNo == 4">
+								<div>
+									<div style="display: flex; justify-content: center; height: 40px;"><triangleSVG style="height: 100%;"></triangleSVG></div>
+									<p style="color: #F04E23; font-size: 12px;">NOW PLAYING</p>
+								</div>
+							</div>
+						</div>
+						<p class="mt-3" style="line-height: 17px; height: 51px;">Oscar Pena Video</p>
 						<div class="flex mt-2" style="color: #7C8082">
 							<p class="mr-3">4:32</p>
 							<p>01/08/23</p>
@@ -270,21 +302,24 @@
     },
     mounted() {			
 			
+	},
+
+	methods: {
+		onClickVideo(e, no, content) {
+			e.preventDefault()
+			e.stopPropagation()
+			let url = document.getElementsByClassName('carousel-video')[no].src
+			console.log(url)
+
+			let mainVideo = document.getElementById('main-video')
+			mainVideo.src = url;
+
+			let mainConent = document.getElementById('testimon-content')
+			mainConent.innerText = content
+			// mainVideo.load();
+			this.videoNo = no;
 		},
-
-		methods: {
-			onClickVideo(e, no) {
-				e.preventDefault()
-				e.stopPropagation()
-				let url = document.getElementsByClassName('carousel-video')[no].src
-				console.log(url)
-
-				let mainVideo = document.getElementById('main-video')
-				mainVideo.src = url;
-				// mainVideo.load();
-				this.videoNo = no;
-			},
-		}
+	}
   };
   
   

@@ -1,16 +1,14 @@
 <template>
 	<div style="position: relative;" id="adjust-wrapper">
-		<div style="height: 100vh; background-color: black;">
-			<div class="pta-text pb-3">
-				<p class="pta-text-1">Customize your angioplasty to accurately<br> match the ballon length to lesion length</p>
-				<p class="pta-text-2">The unique solution allows in-vessel<br> adjustments of the ballon length from 20<br> to 180 mm, designed to dialte various<br> lesion lengths or focal residual stenosis<br> with the same balloon</p>
+		<div id="restore-section" style="height: 100vh; background-color: black;">
+			<div class="pta-text pb-5">
+				<p class="pta-text-1 font-din-medium">Customize your angioplasty to accurately<br> match the ballon length to lesion length</p>
+				<p class="pta-text-2 font-din-light">The unique solution allows in-vessel<br> adjustments of the ballon length from 20<br> to 180 mm, designed to dialte various<br> lesion lengths or focal residual stenosis<br> with the same balloon</p>
 			</div>
 			<div class="pta-section" style="background-color: black;">
 				<div style="overflow: hidden;">
-					<!--  -->
 					<div class="img-panel" id="img-panel">
 						<div class="img-adjust-container">
-							<!-- <adjustSVG style="position: absolute; width: 100vw;"></adjustSVG> -->
 							<div class="img-adjust" id="img-adjust">
 								<img src="../../assets/img/adjust/standard.png" style="width: 100vw; max-width: 100vw;"/>
 							</div>
@@ -22,15 +20,15 @@
 							</div>
 							<div class="p-6" style="background-color: black; color: white; position: relative; height: 300px;">
 								<div id="standard-text" style="position: absolute;">
-									<p style="font-size: 20px;">Standard PTA Balloon</p>
+									<p class="font-din-medium" style="font-size: 20px;">Standard PTA Balloon</p>
 									<p>Unable to exactly match the length of the <br>lesion, potentially damaging healthy parts<br>of the vessel once inflated</p>
 								</div>
-								<div id="restore-text" style="font-size: 18px; line-height: 20px; color: #f04e23; position: absolute; opacity: 0;">
-									<p>Adjust</p>
+								<div id="restore-text" class="font-din-medium" style="font-size: 18px; line-height: 20px; color: #f04e23; position: absolute; opacity: 0;">
+									<p  style="font-size: 24px; line-height: 26px;">Adjust</p>
 									<p>Oscar PTA Balloon</p>
 									<p>Unique adjustable length balloon able to<br>exactly match the length of the lesion</p>
 									
-									<p class="mt-3">Restore</p>
+									<p class="mt-3" style="font-size: 24px; line-height: 26px;">Restore</p>
 									<p>Restoring blood flow quickly and <br>efficently</p>
 								</div>
 							</div>	
@@ -45,38 +43,64 @@
 				
 			</div>
 		</div>
-		<div class="metal-section">
-			<img class="img-ballon" src="../../assets/img/adjust/vertical_balloon.png" style="width: 77px;" />
+		<div id="metal-section" class="metal-section">
+			<div style="height: 60px; background-color: black; position: absolute; left: 0; right: 0;"></div>
+			<img class="img-ballon" src="../../assets/img/adjust/vertical_balloon.png" style="width: 77px; margin-top: 60px;" />
 			<div class="first-marker">
 				<div class="first-marker-arrow"></div>
-				<p class="first-marker-title">Proximal marker</p>
-				<div class="first-marker-content flex" style="align-items: end;">
-					Metal ring on support<br/>
-					catheter aids visualization<br/>
-					ad resists tip deformation<p style="font-size: 13px; margin-bottom: 8px;">2</p>
+				<p class="first-marker-title font-din-medium">Proximal marker</p>
+				<div class="first-marker-content">
+					Metal ring on<br/>
+					support catheter<br/> 
+					aids visualization<br/>
+					and resists tip<br/> 
+					deformation<sup>2</sup>
 				</div>
 			</div>
 			<div class="second-marker">
-				<div class="second-marker-title" style="margin-right: 71px;">Balloon markers</div>
-				<div class="second-marker-content flex" style="align-items: end;">
-					Markers on distal balloon shoulder<br/>
-					and every 60 mm aid accurate<br/>
-					balloon-to-lesion measurement<p style="font-size: 11px; margin-bottom: 8px; margin-left: -24px;">2</p>
+				<div class="second-marker-title font-din-medium" style="margin-right: 71px;">Balloon markers</div>
+				<div class="second-marker-content" style="align-items: end;">
+					Markers on distal<br/> 
+					balloon shoulder<br/>
+					and every 60 mm*<br/> 
+					may aid accurate<br/>
+					balloon-to-lesion<br/>
+					measurement<sup>2</sup>
 				</div>
 				<div class="second-marker-arrow" style="margin-bottom: 20px; margin-top: 14px;"></div>
-				<p>*Balloon ø 7 mm has 2<br>markers, one distal<br>and one at 50 mm</p>
+				<p style="line-height: 18px;">*Balloon ø 7 mm has 2<br>markers, one distal<br>and one at 50 mm</p>
 			</div>
 		</div>
-		<div id="adjust-chart" style="position: relative; background-color: #f45c24;">
+		<div id="adjust-chart" style="position: relative; background-color: #f45c24; padding-top: 80px;">
 			<img class="img-ballon-2" src="../../assets/img/adjust/ballon.png" />
-			<div id="main-content" style="height: 60vh; ">
-				
+			<div id="main-content">
+			</div>
+			<div class="adjust-chart-label">
+				<p class="font-din-medium">Adjustable ballon length</p>
+				<p>Reinflatable balloon can achieve<br/> lengths from 20 to 180 mm</p>
 			</div>
 		</div>
 	</div>
 </template>
 
 <style scoped>
+	.adjust-chart-label {
+		border-top: 1px solid rgb(236, 208, 208);
+		color: white;
+		margin-top: -3vw;
+		margin-left: 10%;
+		width: 76.6%;
+		position: relative;
+		z-index: 10;
+		padding-bottom: 80px;
+	}
+	#restore-section {
+		padding-top: 73px;
+		background-color: black;
+	}
+	#metal-section {
+		/* padding-top: 60px; */
+	}
 	.pta-section {
 		position: relative;
 		width: 100vw;
@@ -118,7 +142,7 @@
 		left: 5%;
 		right: 0px;
 		position: absolute;
-		top: 20vw;
+		top: 23vw;
 		max-width: 120%;
 		width: 110%;
 		z-index: 15;
@@ -133,11 +157,12 @@
 	}
 	.pta-text-1 {
 		font-size: 18px;
+		line-height: 21px;
 	}
 
 	.pta-text-2 {
 		font-size: 18px;
-		color: #939393;
+		line-height: 21px;
 	}
 
 	.metal-section {
@@ -155,12 +180,12 @@
 	.first-marker {
 		position: absolute;
 		color: white;
-		top: 100px;
+		top: 157px;
 		left: 5%;
 	}
 
 	.first-marker-arrow {
-		width: 45vw;
+		width: 60vw;
 		height: 1px;
 		border-bottom: 1px solid white;
 	}
@@ -169,17 +194,18 @@
 		font-size: 16px;
 	}
 	.first-marker-content {
-		font-size: 14px;
+		font-size: 16px;
+		line-height: 19px;
 	}
 
 	.second-marker {
 		position: absolute;
 		color: white;
-		bottom: 60px;
+		bottom: 91px;
 		left: 5%;
 	}
 	.second-marker-arrow {
-		width: 56vw;
+		width: 63vw;
 		height: 1px;
 		border-bottom: 1px solid white;
 	}
@@ -188,7 +214,8 @@
 		font-size: 16px;
 	}
 	.second-marker-content {
-		font-size: 14px;
+		font-size: 16px;
+		line-height: 18px;
 	}
 
 	.third-marker {
@@ -238,11 +265,51 @@ export default {
 	components: { adjustSVG, restoreSVG },
 
 	data() {
-			return {
-			};
+		return {
+			scrolling : {
+				enabled: true,
+				events: "scroll,wheel".split(","),
+				prevent: e => e.preventDefault(),			
+			},
+		};
 	},
-	mounted() {         		
-		let playhead1 = {frame: 0}
+	computed:{
+		isNavClicked(){
+			return this.$store.state.isNavClicked
+		},
+	},
+	mounted() {         
+		gsap.timeline({repeat: 1000})
+		.to('#img-slider', {opacity: 0.3, duration: 0.8})
+		.to('#img-slider', {opacity: 1, duration: 0.8})
+
+		const section = gsap.utils.toArray('#restore-section')[0]
+		ScrollTrigger.create({
+			trigger: section,
+			start: "top bottom-=1",
+			end: "bottom top+=1",
+			onEnter: () => this.goToSection(section),
+			
+		});
+
+		const section1 = gsap.utils.toArray('#metal-section')[0]
+		ScrollTrigger.create({
+			trigger: section1,
+			start: "top bottom-=1",
+			end: "bottom top+=1",
+			onEnter: () => this.goToSection(section1),
+			
+		});
+
+		const section2 = gsap.utils.toArray('#adjust-chart')[0]
+		ScrollTrigger.create({
+			trigger: section2,
+			start: "top bottom-=1",
+			end: "bottom top+=1",
+			onEnter: () => this.goToSection(section2),
+			
+		});
+
 		var parentSliderW = document.getElementById('img-adjust').parentElement.clientWidth
 		document.getElementById('img-slider').style.transform = `translateX(${parentSliderW*0.93*0.85}px)`
 		let style =  window.getComputedStyle(document.getElementById('img-slider'));
@@ -270,25 +337,48 @@ export default {
                 renderer: "svg",
                 loop: false,
                 autoplay: false,
-                path: 'https://assets1.lottiefiles.com/packages/lf20_2xrsDhrCLE.json'
+                path: 'https://lottie.host/efad5735-45df-4af9-a064-e4f8fa16cc27/1Qjz2xkZ1d.json'
             });
 
 		gsap.timeline({
 			scrollTrigger: {
 				trigger: '#adjust-chart',
-				start: 'top top',
+				start: 'top 5%',
 				end: '+=2000',
 				scrub: true,
-				pin: true,
+				onEnter: ()=> {
+					animation3.stop();
+					animation3.play();
+				}
 			}
 		})
-		.to(playhead1, {
-            frame: 148,
-			duration: 26,
-            onUpdate: (a,b,c) => {
-                animation3.goToAndStop(playhead1.frame, true)
-            },
-        })
+	},
+
+	methods: {
+		goToSection(section, anim, i) {
+			if (this.scrolling.enabled && !this.isNavClicked) { // skip if a scroll tween is in progress
+				this.disable();
+				gsap.to(window, {
+					scrollTo: {y: section, autoKill: false},
+					onComplete: this.enable,
+					duration: 1
+				});
+			}
+		},
+		disable() {
+			if (this.scrolling.enabled) {
+				this.scrolling.enabled = false;
+				window.addEventListener("scroll", gsap.ticker.tick, {passive: true});
+				this.scrolling.events.forEach((e, i) => (i ? document : window).addEventListener(e, this.scrolling.prevent, {passive: false}));
+			}
+		},
+		enable() {
+			if (!this.scrolling.enabled) {
+				this.scrolling.enabled = true;
+				window.removeEventListener("scroll", gsap.ticker.tick);
+				this.scrolling.events.forEach((e, i) => (i ? document : window).removeEventListener(e, this.scrolling.prevent));
+			}
+		},
 	}
 };
 

@@ -1,10 +1,10 @@
 <template>
 	<div class="restore-wrapper" id="restore-wrapper">
-		<div class="world-section">
+		<div id="world-section" class="world-section">
 			<h1>A Real-World User Evaluation </h1>
 			<div class="grid grid-cols-3 gap-4 align-stretch">
 				<div class="world-item world-left col-span-2">
-					<h2 style="display: flex;">Real-World User Evaluation<p style="margin-top: 2px; font-size: 14px;">3</p></h2>
+					<h2 class="din-pro-light" style="display: flex;">Real-World User Evaluation<p style="margin-top: 2px; font-size: 14px;">3</p></h2>
 					<div class="world-content" style="padding-left: 0; padding-right: 0;">
 						<div class="world-content-left flex align-center gap-1">
 							<img class="world-left-image" src="../../assets/img/restore/Icon_1.png"/>
@@ -69,19 +69,19 @@
 					<div class="achieve-title flex"><span class="color-orange" style="margin-right: 5px;">Oscar</span> pushability on the bench<p style="margin-top: 0px; font-size: 16px;">4</p></div>
 					<div class="grid grid-cols-3 gap-3">
 						<div class="col-span-1 pt-6">
-								<p class="color-orange mb-3"><b>Oscar, 0.018"</b><br>BITRONIK</p>
-								<p class="color-gray"><b>NaviCross, 0.035"</b><br>Terumo</p>
-								<div class="color-gray" style="margin-top: 50px;">
-									<div class="flex">
-										<div style="width: 20px; height: 20px; background-color:#F04E23; margin-right: 10px;"></div>
-										<p>Position 0</p>
-									</div>
-									<div class="flex">
-										<div style="width: 20px; height: 20px; background-color:#F58B6E; margin-right: 10px;"></div>
-										<p>180 mm</p>
-									</div>
+							<p class="color-orange mb-3"><b>Oscar, 0.018"</b><br>BITRONIK</p>
+							<p class="color-gray"><b>NaviCross, 0.035"</b><br>Terumo</p>
+							<div class="color-gray" style="margin-top: 50px;">
+								<div class="flex">
+									<div style="width: 20px; height: 20px; background-color:#F04E23; margin-right: 10px;"></div>
+									<p>Position 0</p>
+								</div>
+								<div class="flex">
+									<div style="width: 20px; height: 20px; background-color:#F58B6E; margin-right: 10px;"></div>
+									<p>180 mm</p>
 								</div>
 							</div>
+						</div>
 						<div class="col-span-2" style="padding-top: 30px;">
 							<div id="restoreLottie6" class="lottie-wrapper" ref="restoreChart6" style="width: 100%; position: relative;">
 								<img src="../../assets/img/Scale.png" style="position: absolute; left: 3vw; right: 0; bottom: -50px;"/>
@@ -107,9 +107,9 @@
 			
 
 		</div>
-		<div class="meet-section">
+		<div class="meet-section" id="meet-section">
 			<div class="meet-right">
-				<div class="meet-header">
+				<div class="meet-header font-din-light">
 					<h1>Meet Oscar</h1>
 					<p>
 					The all-in-one solution to reach,<br/>
@@ -121,7 +121,7 @@
 					<button class="meet-button">Watch the video</button>
 				</div>
 				<div class="meet-footer">
-					<button class="btn-brochure">View the brochure</button>
+					<button class="btn-brochure font-din-medium">View the brochure</button>
 				</div>
 			</div>
 		</div>
@@ -257,9 +257,9 @@
 		width: 100%;
 		padding-left: 5%;
 		padding-right: 5%;
-		padding-top: 30px;
+		padding-top: 105px;
 		padding-bottom: 20px;
-		background-color: #F47502;
+		background: linear-gradient(to right, #EF5923, #ec6926, #EF5923);
 	}
 	.meet-header p {
 		font-size: 26px;
@@ -269,7 +269,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-color: #F36D03;
+		background: linear-gradient(to right, #EF5923, #ec6926, #EF5923);
 		padding-top: 50px;
 		padding-bottom: 80px;
 	}
@@ -289,160 +289,168 @@
   
     data() {
       return {
+		scrolling : {
+			enabled: true,
+			events: "scroll,wheel".split(","),
+			prevent: e => e.preventDefault(),			
+		},
       };
     },
+	computed:{
+		isNavClicked(){
+			return this.$store.state.isNavClicked
+		},
+	},
     mounted() {		
-			let playhead = {frame: 0}
-			let playhead1 = {frame: 0}
-			let playhead2 = {frame: 0}
-
-			const selft = this;
-			const {restore1, restore2, restore3, restoreChart6, restoreChart7, restoreChart8} = this.$refs;
-
-			const animation1 = lottie.loadAnimation({
-                container: gsap.utils.toArray("#restore1")[0],
-                renderer: "svg",
-                loop: false,
-                autoplay: false,
-                path: 'https://assets4.lottiefiles.com/packages/lf20_wciY22iqor.json'
-            });
-
-			const animation2 = lottie.loadAnimation({
-                container: gsap.utils.toArray("#restore2")[0],
-                renderer: "svg",
-                loop: false,
-                autoplay: false,
-                path: 'https://assets2.lottiefiles.com/packages/lf20_dSaBZqLXsv.json'
-            });
+		const section = gsap.utils.toArray('#meet-section')[0]
+		ScrollTrigger.create({
+			trigger: section,
+			start: "top bottom-=1",
+			end: "bottom top+=1",
+			onEnter: () => this.goToSection(section),
 			
-			const animation3 = lottie.loadAnimation({
-                container: gsap.utils.toArray("#restore3")[0],
-                renderer: "svg",
-                loop: false,
-                autoplay: false,
-                path: 'https://assets8.lottiefiles.com/packages/lf20_XYswRcqon7.json'
-            });
+		});
 
-			const animation4 = lottie.loadAnimation({
-                container: gsap.utils.toArray("#restoreLottie6")[0],
-                renderer: "svg",
-                loop: false,
-                autoplay: false,
-                path: 'https://assets4.lottiefiles.com/packages/lf20_aX96pVGsFP.json'
-            });
 
-			const animation5 = lottie.loadAnimation({
-                container: gsap.utils.toArray("#restoreLottie7")[0],
-                renderer: "svg",
-                loop: false,
-                autoplay: false,
-                path: 'https://assets3.lottiefiles.com/packages/lf20_xeSYcRENpQ.json'
-            });
+		const animation1 = lottie.loadAnimation({
+			container: gsap.utils.toArray("#restore1")[0],
+			renderer: "svg",
+			loop: false,
+			autoplay: false,
+			path: 'https://assets4.lottiefiles.com/packages/lf20_wciY22iqor.json'
+		});
 
-			const animation6 = lottie.loadAnimation({
-                container: gsap.utils.toArray("#restoreLottie8")[0],
-                renderer: "svg",
-                loop: false,
-                autoplay: false,
-                path: 'https://assets6.lottiefiles.com/packages/lf20_Giw8Yw7Niq.json'
-            });
+		const animation2 = lottie.loadAnimation({
+			container: gsap.utils.toArray("#restore2")[0],
+			renderer: "svg",
+			loop: false,
+			autoplay: false,
+			path: 'https://assets2.lottiefiles.com/packages/lf20_dSaBZqLXsv.json'
+		});
+		
+		const animation3 = lottie.loadAnimation({
+			container: gsap.utils.toArray("#restore3")[0],
+			renderer: "svg",
+			loop: false,
+			autoplay: false,
+			path: 'https://assets8.lottiefiles.com/packages/lf20_XYswRcqon7.json'
+		});
 
-			gsap.timeline({
-				scrollTrigger: {
-					trigger: '.world-section',
-					start: 'center center',
-					scrub: true,
-					pin: true
+		const animation4 = lottie.loadAnimation({
+			container: gsap.utils.toArray("#restoreLottie6")[0],
+			renderer: "svg",
+			loop: false,
+			autoplay: false,
+			path: 'https://assets4.lottiefiles.com/packages/lf20_aX96pVGsFP.json'
+		});
+
+		const animation5 = lottie.loadAnimation({
+			container: gsap.utils.toArray("#restoreLottie7")[0],
+			renderer: "svg",
+			loop: false,
+			autoplay: false,
+			path: 'https://assets3.lottiefiles.com/packages/lf20_xeSYcRENpQ.json'
+		});
+
+		const animation6 = lottie.loadAnimation({
+			container: gsap.utils.toArray("#restoreLottie8")[0],
+			renderer: "svg",
+			loop: false,
+			autoplay: false,
+			path: 'https://assets6.lottiefiles.com/packages/lf20_Giw8Yw7Niq.json'
+		});
+
+		gsap.timeline({
+			scrollTrigger: {
+				trigger: '.world-section',
+				start: 'center center',
+				scrub: true,
+				onEnter: ()=> {
+					animation1.stop();
+					animation2.stop();
+					animation3.stop();
+					animation1.play();
+					animation2.play();
+					animation3.play();
 				}
-			})
-			.to(playhead, {
-				frame: 58,
-				ease: "power2.in",
-				onUpdate: (a,b,c) => {
-					animation1.goToAndStop(playhead.frame, true)
-					animation2.goToAndStop(playhead.frame, true)
-					animation3.goToAndStop(playhead.frame, true)
-				},
-			})
+			}
+		})
 
-			gsap.timeline({
-				scrollTrigger: {
-					trigger: '.world-section',
-					start: 'top bottom',
-					scrub: true,
-					end: "top top",
+		gsap.timeline({
+			scrollTrigger: {
+				trigger: '.world-section',
+				start: 'top bottom',
+				scrub: true,
+				end: "top top",
+			}
+		})
+		.to(".world-section", {opacity:1})
+
+		gsap.timeline({
+			scrollTrigger: {
+				trigger: '.achieve-section',
+				start: 'center center',
+				scrub: true,
+				onEnter: ()=> {
+					animation4.stop();
+					animation5.stop();
+					animation6.stop();
+					animation4.play();
+					animation5.play();
+					animation6.play();
 				}
-			})
-			.to(".world-section", {opacity:1})
+			}
+		})
 
-			gsap.timeline({
-				scrollTrigger: {
-					trigger: '.achieve-section',
-					start: 'center center',
-					scrub: true,
-					pin: true
-				}
-			})
-			.add('arhieve-move')
-			.to(playhead1, {
-				frame: 58,
-				ease: "power2.in",
-				onUpdate: (a,b,c) => {
-					animation5.goToAndStop(playhead1.frame, true)
-					animation6.goToAndStop(playhead1.frame, true)
-				},
-			}, 'arhieve-move')
-			.to(playhead2, {
-				frame: 148,
-				ease: "power2.in",
-				onUpdate: (a,b,c) => {
-					animation4.goToAndStop(playhead2.frame, true)
-				},
-			}, 'arhieve-move')
-
-			gsap.timeline({
-				scrollTrigger: {
+		gsap.timeline({
+			scrollTrigger: {
 				trigger: '.achieve-section',
 				start: 'top bottom',
 				scrub: true,
-							end: "center center",
-				}
-			})
-			.to(".achieve-section", {opacity:1})
+				end: "center center",
+			}
+		})
+		.to(".achieve-section", {opacity:1})
 
-			gsap.timeline({
-				scrollTrigger: {
-				trigger: '.meet-section',
-				start: 'top center',
-				scrub: true,
-							end: "top top",
-				}
-			})
-			.to(".meet-left", {left:0})
-		},
+		gsap.timeline({
+			scrollTrigger: {
+			trigger: '.meet-section',
+			start: 'top center',
+			scrub: true,
+			end: "top top",
+			}
+		})
+		.to(".meet-left", {left:0})
+	},
 
-		methods: {
-			goToSection (top) {
-				let observer = ScrollTrigger.normalizeScroll(true);
-				console.log('goTo', top);
-				this.scrollTween = gsap.to(window, {
-					scrollTo: {y: top, autoKill: false},
-					ease: "strong.inOut",
-					duration: 1,
-					onStart: () => {
-						observer.disable(); // for touch devices, as soon as we start forcing scroll it should stop any current touch-scrolling, so we just disable() and enable() the normalizeScroll observer
-						observer.enable();
-					},
-					onComplete: () => this.scrollTween = null,
-					overwrite: true
+	methods: {
+		goToSection(section, anim, i) {
+			if (this.scrolling.enabled && !this.isNavClicked) { // skip if a scroll tween is in progress
+				this.disable();
+				gsap.to(window, {
+					scrollTo: {y: section, autoKill: false},
+					onComplete: this.enable,
+					duration: 1
 				});
-			},
-			getTopPosition (el, idx) {
-				// return (idx - 1) * window.innerHeight;
-				// if (el.parentElement.classList.contains('pin-spacer')) return el.parentElement.getBoundingClientRect().top + window.scrollY;
-				return el.getBoundingClientRect().top + window.scrollY;
-			},
-    	}
+
+				// anim && anim.restart();
+			}
+		},
+		disable() {
+			if (this.scrolling.enabled) {
+				this.scrolling.enabled = false;
+				window.addEventListener("scroll", gsap.ticker.tick, {passive: true});
+				this.scrolling.events.forEach((e, i) => (i ? document : window).addEventListener(e, this.scrolling.prevent, {passive: false}));
+			}
+		},
+		enable() {
+			if (!this.scrolling.enabled) {
+				this.scrolling.enabled = true;
+				window.removeEventListener("scroll", gsap.ticker.tick);
+				this.scrolling.events.forEach((e, i) => (i ? document : window).removeEventListener(e, this.scrolling.prevent));
+			}
+		}
+	}
   };
   
   
