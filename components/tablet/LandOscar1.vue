@@ -4,21 +4,21 @@
       <div class="loading"></div>
     </div>
     <div
-      class="mx-auto items-center container-fluid"
+      class="items-center container-fluid"
     >
       <div>
         <div :class="'main-img' + (loaded ? ' show' : '')">
-          <img src="../assets/img/oscar/oscar image X2-min.png" style="margin-top: 76px; height: 100vh;" />
+          <img src="../../assets/img/oscar/oscar image X2-min.png" style="margin-top: 76px; height: 100vh;" />
         </div>
         <div :class="'oscar-texts' + (loaded ? ' show' : '')" >
           <div class="flex font-din-medium">
-            <p class="text-white" style="font-size: 80px; line-height: 80px;">Oscar</p>
+            <p class="text-white" style="font-size: 60px; line-height: 64px;">Oscar</p>
             <p class="text-white" style="font-size: 20px; padding-top: 5px">®</p>
           </div>
-          <p class="text-white mb-5" style="font-size: 25px;"><span class="font-din-medium">O</span>ne <span class="font-din-medium">S</span>olution: <span class="font-din-medium">C</span>ross. <span class="font-din-medium">A</span>djust. <span class="font-din-medium">R</span>estore.</p>
-          <p class="text-white font-din-light" style="font-size: 40px; line-height: 40px;">The all-in-one solution to reach,</p>
+          <p class="text-white mb-5" style="font-size: 22px;"><span class="font-din-medium">O</span>ne <span class="font-din-medium">S</span>olution: <span class="font-din-medium">C</span>ross. <span class="font-din-medium">A</span>djust. <span class="font-din-medium">R</span>estore.</p>
+          <p class="text-white font-din-light" style="font-size: 30px; line-height: 32px;">The all-in-one solution to reach,</p>
           <div class="flex font-din-light">
-            <p class="text-white" style="font-size: 40px;">cross and prepare lesions</p>
+            <p class="text-white" style="font-size: 30px;">cross and prepare lesions</p>
             <p class="text-white" style="padding-top: 5px;">1</p>
           </div>
         </div>

@@ -26,7 +26,7 @@
 						</div>
 						<div class="col-span-2" style="padding-top: 30px;">
 							<div id="crossLottie" class="lottie-wrapper" ref="crossChart" style="width: 100%; position: relative;">
-								<img src="../../assets/img/Scale.png" style="position: absolute; left: 0; right: 0; bottom: -100px;"/>
+								<!-- <img src="../../assets/img/Scale.png" style="position: absolute; left: 0; right: 0; bottom: -100px;"/> -->
 							</div>
 						</div>
 					</div>
@@ -105,9 +105,9 @@
 				<p style="">*Balloon ø 7 mm has 2 markers, one distal and one at 50 mm</p>
 			</div>
 		</div>
-		<div id="adjust-chart" style="position: relative; background-color: #f45c24;">
+		<div id="adjust-chart" style="position: relative; background-color: #f45c24; padding-top: 80px; padding-bottom: 100px;">
 			<img class="img-ballon-2" src="../../assets/img/adjust/ballon.png" />
-			<div id="main-content" style="height: 60vh; ">
+			<div id="main-content" style="">
 				
 			</div>
 		</div>
@@ -162,10 +162,6 @@
 		z-index: 100;
 	}
 	.img-ballon-2 {
-		left: 5%;
-		right: 0px;
-		position: absolute;
-		top: 13vw;
 		max-width: 120%;
 		width: 110%;
 		z-index: 15;
@@ -361,7 +357,7 @@ export default {
                 renderer: "svg",
                 loop: false,
                 autoplay: false,
-                path: 'https://assets1.lottiefiles.com/packages/lf20_2xrsDhrCLE.json'
+                path: 'https://lottie.host/9cd4b113-6dfb-46f7-aabc-3885304d549e/nmjvDXYrDg.json'
             });
 
 		gsap.timeline({

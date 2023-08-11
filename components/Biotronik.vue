@@ -28,9 +28,10 @@
       <contactus />
       <desktop-footer />
     </template>
-    <template v-if="mode==='tablet'">
+    <template v-if="mode==='tablet' || mode==='landscape'">
       <div class="my-panel" id="oscar-wrapper">
-        <tablet-oscar1 />
+        <tablet-oscar1 v-if="mode==='tablet'"/>
+        <land-oscar1 v-if="mode==='landscape'"/>
         <tablet-oscar2 />
       </div>
       <tablet-solution class="my-panel" />
@@ -75,6 +76,7 @@ import HeroContentMobile from '@/components/HeroContentMobile'
 import Footer from '@/components/Footer'
 
 import TabletOscar1 from '@/components/tablet/Oscar1.vue'
+import LandOscar1 from '@/components/tablet/LandOscar1.vue'
 import TabletOscar2 from '@/components/tablet/Oscar2.vue'
 import TabletSolution from '@/components/tablet/Solution.vue'
 import TabletCross from '@/components/tablet/Cross.vue'
@@ -124,7 +126,6 @@ export default {
   methods: {
     goToSection (top) {
       let observer = ScrollTrigger.normalizeScroll(true);
-      console.log('goTo', top);
       this.scrollTween = gsap.to(window, {
         scrollTo: {y: top, autoKill: false},
         // ease: "strong.inOut",
@@ -147,6 +148,7 @@ export default {
   mounted () {
 
     if (window.innerWidth >= 1300) this.mode = 'desktop';
+    else if(window.innerWidth >= 800) this.mode = 'landscape'
     else if(window.innerWidth >= 500) this.mode = 'tablet'
     else this.mode = 'mobile';
 
@@ -177,6 +179,7 @@ export default {
     'tablet-test': TabletTestimon,
     'tablet-contactus': TabletContactUs,
     'tablet-footer': TabletFooter,
+    'land-oscar1': LandOscar1,
 
     'mobile-oscar1': MobileOscar1,
     'mobile-oscar2': MobileOscar2,

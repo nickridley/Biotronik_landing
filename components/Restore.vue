@@ -87,7 +87,7 @@
 							</div>
 						<div class="col-span-2" style="padding-top: 30px;">
 							<div id="restoreLottie6" class="lottie-wrapper" ref="restoreChart6" style="width: 100%; position: relative;">
-								<img src="../assets/img/Scale.png" style="position: absolute; left: 40px; right: 0; bottom: -50px;"/>
+								<img src="../assets/img/img_10.png" style="position: absolute; left: 40px; right: 0; bottom: -50px;"/>
 							</div>
 						</div>
 					</div>
@@ -243,7 +243,7 @@
 		background-color: white;
 		padding: 10px 50px 10px 50px;
 		border-radius: 25px;
-		box-shadow: 1px 2px 3px 2px #1c1a1a91;
+		box-shadow: 1px 2px 3px 2px rgb(28 26 26 / 32%);
 		color: #EF5923;
 		position: relative;
 		z-index: 30;
@@ -289,6 +289,22 @@
 		},
 	},
     mounted() {			
+			const section = gsap.utils.toArray('#meet-section')[0]
+			ScrollTrigger.create({
+				trigger: section,
+				start: "top bottom-=1",
+				end: "bottom top",
+				onEnter: () => this.goToSection(section),
+			});
+
+			const section1 = gsap.utils.toArray('#world-section')[0]
+			ScrollTrigger.create({
+				trigger: section1,
+				start: "top bottom-=1",
+				end: "bottom top+=1",
+				onEnter: () => this.goToSection(section1),
+			});
+
 			let playhead = {frame: 0}
 			let playhead1 = {frame: 0}
 			let playhead2 = {frame: 0}
@@ -348,7 +364,7 @@
 			gsap.timeline({
 				scrollTrigger: {
 					trigger: '.world-section',
-					start: 'top top',
+					start: 'top 5%',
 					scrub: true,
 					onEnter: () => {
 						animation1.stop();
@@ -369,7 +385,8 @@
 				end: "top top",
 				}
 			})
-			.to(".world-section", {opacity:1})
+			.add('world-anim')
+			.to(".world-section", {opacity:1}, 'world-anim')
 
 			gsap.timeline({
 				scrollTrigger: {
@@ -388,21 +405,7 @@
 				}
 			})
 
-			const section = gsap.utils.toArray('#meet-section')[0]
-			ScrollTrigger.create({
-				trigger: section,
-				start: "top bottom-=1",
-				end: "bottom top+=1",
-				onEnter: () => this.goToSection(section),
-			});
-
-			const section1 = gsap.utils.toArray('#world-section')[0]
-			ScrollTrigger.create({
-				trigger: section1,
-				start: "top bottom-=1",
-				end: "bottom top+=1",
-				onEnter: () => this.goToSection(section1),
-			});
+			
 			
 			// const section2 = gsap.utils.toArray('#achieve-section')[0]
 			// ScrollTrigger.create({

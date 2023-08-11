@@ -142,7 +142,7 @@
                 renderer: "svg",
                 loop: false,
                 autoplay: false,
-                path: 'https://assets5.lottiefiles.com/packages/lf20_5CUTywzNId.json'
+                path: 'https://lottie.host/49c3f108-43a9-45cc-b363-07c107bfe57b/zwR94Vz9bV.json'
             });
 
         gsap.to('.solution-box-2', {scale: 0.6}).play()

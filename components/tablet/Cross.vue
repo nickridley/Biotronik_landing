@@ -38,27 +38,27 @@
 					<div id="cross-footer" class="px-6 pt-6 pb-24" style="background-color: #FDF1E9; position: fixed; top: 82vh; left: 0; right: 0; height: 18vh;">
 						<div class="right-1-footer">
 							<p class="cross-content font-din-medium" style="color: #898685;">Easy-to-use Lock Grip</p>
-							<p style="font-size: 14px; color: #a49f9c;">Seals and secures for accurate positioning of Oscar Dilator,</p>
-							<p style="font-size: 14px; color: #a49f9c;">Oscar PTA Ballon or guide wire.</p>
+							<p style="font-size: 18px; line-height: 20px; color: #a49f9c;">Seals and secures for accurate positioning of Oscar Dilator,</p>
+							<p style="font-size: 18px; line-height: 20px; color: #a49f9c;">Oscar PTA Ballon or guide wire.</p>
 						</div>
 						<div class="right-2-footer">
 							<p class="text-white cross-content font-din-medium" style="color: #F68C6F;">Cross</p>
-							<p class="text-white font-din-medium" style="font-size: 14px; line-height: 17px; color: #928e8c;">Braided Support Catheter and Extendable Dilator</p>
-							<p class="text-white" style="font-size: 14px;line-height: 17px; color: #928e8c;">Position 0:</p>
-							<p class="text-white" style="font-size: 14px;line-height: 17px; color: #928e8c;">Strongest support level</p>
+							<p class="text-white font-din-medium" style="font-size: 18px; line-height: 20px; color: #928e8c;">Braided Support Catheter and Extendable Dilator</p>
+							<p class="text-white" style="font-size: 18px;line-height: 20px; color: #928e8c;">Position 0:</p>
+							<p class="text-white" style="font-size: 18px;line-height: 20px; color: #928e8c;">Strongest support level</p>
 						</div>
 						<div class="right-3-footer">
 							<p class="text-white cross-content font-din-medium" style="color: #F68C6F;">Cross</p>
-							<p class="text-white font-din-medium" style="font-size: 14px; line-height: 17px; color: #928e8c;">Braided Support Catheter and Extendable Dilator</p>
-							<p class="text-white" style="font-size: 14px;line-height: 17px; color: #928e8c;">Position Contrast:</p>
-							<p class="text-white" style="font-size: 14px;line-height: 17px; color: #928e8c;">Slightly extended dilator tip allows local contrast injection</p>
+							<p class="text-white font-din-medium" style="font-size: 18px; line-height: 20px; color: #928e8c;">Braided Support Catheter and Extendable Dilator</p>
+							<p class="text-white" style="font-size: 18px;line-height: 20px; color: #928e8c;">Position Contrast:</p>
+							<p class="text-white" style="font-size: 18px;line-height: 20px; color: #928e8c;">Slightly extended dilator tip allows local contrast injection</p>
 						</div>
 						<div class="right-4-footer" style="width: 95%;">
 							<p class="cross-content font-din-medium" style="color: #F68C6F;">Cross</p>
-							<p class="font-grey font-din-medium" style="font-size: 14px; line-height: 17px;">Extended Dilator</p>
-							<p class="font-grey" style="font-size: 14px;line-height: 17px;">Position Max Flex:</p>
-							<p class="font-grey" style="font-size: 14px;line-height: 17px;">Most flexible support level with fully extended dilator</p>
-							<p class="font-grey" style="font-size: 14px;line-height: 17px; text-align: right;">
+							<p class="font-grey font-din-medium" style="font-size: 18px; line-height: 20px;">Extended Dilator</p>
+							<p class="font-grey" style="font-size: 18px;line-height: 20px;">Position Max Flex:</p>
+							<p class="font-grey" style="font-size: 18px;line-height: 20px;">Most flexible support level with fully extended dilator</p>
+							<p class="font-grey" style="font-size: 18px;line-height: 20px; text-align: right;">
 								<br>Dilator extends from 0-191 mm
 							</p>
 						</div>
@@ -112,8 +112,8 @@
 	}
 	.cross-content {
 		color: white;
-		font-size: 20px;
-		line-height: 23px;
+		font-size: 23px;
+		line-height: 25px;
 	}
 	
 	.cross-header {
@@ -212,7 +212,7 @@
 			renderer: "svg",
 			loop: false,
 			autoplay: false,
-			path: 'https://assets9.lottiefiles.com/packages/lf20_rJzvFizMU4.json'
+			path: 'https://lottie.host/9a107937-dcc3-4b3c-8749-003e71accd5c/Pe90CPFnQW.json'
 		});
 		let corssVideo = document.getElementById('cross-video')
 

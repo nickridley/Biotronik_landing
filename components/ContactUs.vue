@@ -11,46 +11,7 @@
             <img src="../assets/img/oscar/oscar image X2-min.png" />
           </div>
           <div class="contact-form">
-            <p class="my-4 font-din-light" style="font-size: 60px; color: white;">Contact us</p>
-            <div class="grid grid-cols-2 gap-6">
-                <div class="flex">
-                  <input class="oscar-input" placeholder="Job Title"/>
-                </div>
-                <div></div>
-                <div class="flex">
-                  <input class="oscar-input" placeholder="First Name*"/>
-                </div>
-                <div class="flex">
-                  <input class="oscar-input" placeholder="Last Name*"/>
-                </div>
-                <div class="flex">
-                  <input class="oscar-input" placeholder="Email Address*"/>
-                </div>
-                <div class="flex">
-                  <input class="oscar-input" placeholder="Telephone"/>
-                </div>
-                <div class="flex">
-                  <input class="oscar-input" placeholder="Institution*"/>
-                </div>
-                <div class="flex">
-                    <select class="oscar-input">
-                    </select>
-                </div>
-                <div class="col-span-2">
-                  <textarea style="min-height: 100px; padding-top: 5px;" class="oscar-input" placeholder="Message*"></textarea>
-                </div>
-            </div>
-            <div class="mb-2" style="color: white;">
-                <input type="checkbox" /> <span>I agree to be contracted by a BIOTRONIK representative</span>
-            </div>
-            <div style="color: white;">
-                <input type="checkbox" /> <span>I agree to receive marketing content and product updates by e-mail</span>
-            </div>
-            <p style="color: white;" class="mb-4">Your information will be processed in accordance with our <u>privacy statement</u>. Please note that you can withdraw your consent at any 
-            time by sending a message to to marketing.vi@biotronik.com or by using the unsubscribe option in our e-mails</p>
-            <div class="grid grid-cols-2 gap-4">
-                <button class="request-btn col-span-1 font-din-medium">Submit</button>
-            </div>            
+            <iframe src="https://go.demo.pardot.com/l/409163/2023-08-01/21ch" width="100%" height="100%" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
           </div>
           <p style="color: white; position: absolute; bottom: 50px; left: 10%; right: 15%; font-size: 10px;">1. per IFU: Indicated for percutaneous transluminal interventions in the peripheral 
             vasculature to provide support during access into and to dilate stenoses in femoral, 
@@ -97,13 +58,14 @@
         left: 35%;
         right: 15%;
         top: 12%;
+        height: 850px;
     }
     .main-img {
         position: absolute;
     }
     .contact-wrapper {
         background-color: #F25625;
-        height: 100vh; 
+        height: calc(100vh + 200px); 
         overflow: hidden; 
         position: relative;
     }
@@ -175,7 +137,7 @@
       const section = gsap.utils.toArray('#contact-wrapper')[0]
 			ScrollTrigger.create({
 				trigger: section,
-				start: "top bottom-=1",
+				start: "top bottom-=200",
 				end: "bottom top+=1",
 				onEnter: () => this.goToSection(section),
 			});

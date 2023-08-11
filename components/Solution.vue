@@ -20,7 +20,7 @@
                         <div style="width: 50%; padding-right: 10%;">
                             <div id="chartLottie2" class="lottie-wrapper2" ref="dial" style=""></div>
                             <div class="solution-text">
-                                <p class="font-grey solution-text-1" style="padding-top: 30px; padding-left: 50px; font-size: 35px; border: solid 1px; border-width: 1px 0 0 0;" >An average PTA balloon requires<br> up to 65 stock units to cover a full<br> size range. The Oscar PTA Ballon<br> only needs 11.</p>
+                                <p class="font-grey solution-text-1" style="padding-top: 30px; padding-left: 50px; font-size: 35px; line-height: 37px; border: solid 1px; border-width: 1px 0 0 0;" >An average PTA balloon requires<br> up to 65 stock units to cover a full<br> size range. The Oscar PTA Ballon<br> only needs 11.</p>
                                 <p class="font-grey solution-text-2" style=" padding-bottom: 30px; padding-left: 50px;"><sup>◊</sup>Compared to equivalent available sizes of Passeo<sup>®</sup>-14 and Passeo<sup>®</sup>-18 PTA balloons</p>
                             </div>
                         </div>
@@ -150,7 +150,7 @@
                 renderer: "svg",
                 loop: false,
                 autoplay: false,
-                path: 'https://assets5.lottiefiles.com/packages/lf20_5CUTywzNId.json'
+                path: 'https://lottie.host/49c3f108-43a9-45cc-b363-07c107bfe57b/zwR94Vz9bV.json'
             });
 
         gsap.to('.solution-box-2', {scale: 0.6}).play()

@@ -35,7 +35,7 @@
 						</div>
 					</div>
 
-					<div id="cross-footer" class="px-6 pt-4 pb-24 cross-right-footer" style="background-color: #FDF1E9; position: fixed; top: 80vh; left: 0; right: 0; height: 20vh;">
+					<div id="cross-footer" class="px-6 pt-4 pb-24 cross-right-footer" style="background-color: #FDF1E9; position: fixed; top: 75vh; left: 0; right: 0; height: 25vh;">
 						<div class="right-1-footer">
 							<p class="cross-content font-din-medium" style="color: #8d8a89;">Easy-to-use Lock Grip</p>
 							<p style="font-size: 20px; line-height: 22px; color: #928e8d;">Seals and secures for accurate<br> positioning of Oscar Dilator,</p>
@@ -70,15 +70,15 @@
 					<p class="font-orange font-din-medium" style="font-size: 25px; border-top: 2px solid #ED6C23; display: table; line-height: 34px; width: 100%;">Achieve the pushability of an</p>
 					<p class="font-orange font-din-medium" style="font-size: 25px; line-height: 34px; width: 100%;">0.035" system on an 0.018" <br> platform*</p>
 					<div style="margin-top: 40px;">
-						<p class="font-din-medium" style="border-bottom: 2px solid grey; font-size: 24px; padding-bottom: 14px;">Oscar Variale Pushability</p>
+						<p class="font-din-medium" style="border-bottom: 2px solid grey; font-size: 24px; padding-bottom: 14px;">Oscar Variable Pushability</p>
 						<div class="col-span-2" style="padding-top: 30px; position: relative;">
-							<div id="crossLottie" class="lottie-wrapper" ref="crossChart" style="width: 100%; position: relative; margin-left: -35px;">
+							<div id="crossLottie" class="lottie-wrapper" ref="crossChart" style="width: calc(100%+35px); position: relative; margin-left: -35px;">
 							</div>
-							<img src="../../assets/img/Scale.png" style="position: absolute; left: 0; right: 0; bottom: -100px;"/>
+							<!-- <img src="../../assets/img/Scale.png" style="position: absolute; left: 0; right: 0; bottom: -100px;"/> -->
 						</div>
 						<div class="grid grid-cols-1 gap-4 pr-4">
 							<div class="col-span-1">
-								<div class="color-gray" style="margin-top: 100px;">
+								<div class="color-gray" style="margin-top: 10px;">
 									<div class="flex">
 										<div style="width: 20px; height: 20px; background-color:#F04E23; margin-right: 10px;"></div>
 										<p>Position 0</p>
@@ -241,7 +241,7 @@
 			renderer: "svg",
 			loop: false,
 			autoplay: false,
-			path: 'https://assets7.lottiefiles.com/packages/lf20_Vy0ZaXDB1V.json'
+			path: 'https://lottie.host/9a107937-dcc3-4b3c-8749-003e71accd5c/Pe90CPFnQW.json'
 		});
 
 

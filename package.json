@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@ashthornton/asscroll": "^2.0.11",
-    "gsap": "./gsap-bonus.tgz",
+    "gsap": "^3.11.5",
     "nuxt": "^2.14.3",
     "nuxt-agile": "^1.0.1",
     "nuxt-gsap-module": "^2.0.0",

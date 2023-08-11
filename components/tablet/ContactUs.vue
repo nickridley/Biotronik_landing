@@ -12,46 +12,7 @@
             <img src="../../assets/img/oscar/oscar image X2-min.png" />
           </div>
           <div class="contact-form">
-            <p class="my-2" style="font-size: 44px; color: white;">Contact</p>
-            <div class="grid grid-cols-2 gap-4">
-                <div class="flex">
-                  <input class="oscar-input" placeholder="Job Title"/>
-                </div>
-                <div></div>
-                <div class="flex">
-                  <input class="oscar-input" placeholder="First Name*"/>
-                </div>
-                <div class="flex">
-                  <input class="oscar-input" placeholder="Last Name*"/>
-                </div>
-                <div class="flex">
-                  <input class="oscar-input" placeholder="Email Address*"/>
-                </div>
-                <div class="flex">
-                  <input class="oscar-input" placeholder="Telephone"/>
-                </div>
-                <div class="flex">
-                  <input class="oscar-input" placeholder="Institution*"/>
-                </div>
-                <div class="flex">
-                    <select class="oscar-input">
-                    </select>
-                </div>
-                <div class="col-span-2">
-                  <textarea style="min-height: 100px; padding-top: 5px;" class="oscar-input" placeholder="Message*"></textarea>
-                </div>
-            </div>
-            <div class="mb-2" style="color: white;">
-                <input type="checkbox" /> <span>I agree to be contracted by a BIOTRONIK representative</span>
-            </div>
-            <div class="mb-4" style="color: white;">
-                <input type="checkbox" /> <span>I agree to receive marketing content and product updates by e-mail</span>
-            </div>
-            <p style="color: white;" class="mb-4">Your information will be processed in accordance with our <u>privacy statement</u>. Please note that you can withdraw your consent at any 
-            time by sending a message to to marketing.vi@biotronik.com or by using the unsubscribe option in our e-mails</p>
-            <div class="grid grid-cols-2 gap-4 mb-4">
-                <button class="request-btn col-span-1">Submit</button>
-            </div>            
+            <iframe src="https://go.demo.pardot.com/l/409163/2023-08-01/21ch" width="100%" height="830px" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>          
             <p style="color: white;bottom: 30px; left: 5%; right: 5%; font-size: 10px;">1. per IFU: Indicated for percutaneous transluminal interventions in the peripheral 
               vasculature to provide support during access into and to dilate stenoses in femoral, 
               popliteal and infrapopliteal arteries. The product is also intended for injection of radiopaque 

@@ -77,7 +77,7 @@
 		position: absolute;
 		z-index: 10;
 		left: 10%;
-		right: 10%;
+		right: 14%;
 		overflow: hidden;
 		height: 130vh;
 	}
@@ -152,7 +152,7 @@
 		opacity: 0;
 		top: 55%;
 		left: 13vw;
-		z-index: 25;
+		z-index: 52;
 	}
 
 	.first-marker-arrow {
@@ -164,9 +164,11 @@
 
 	.first-marker-title {
 		font-size: 30px;
+		line-height: 32px;
 	}
 	.first-marker-content {
-		font-size: 20px;
+		font-size: 24px;
+		line-height: 26px;
 	}
 
 	.second-marker {
@@ -189,9 +191,11 @@
 
 	.second-marker-title {
 		font-size: 30px;
+		line-height: 32px;
 	}
 	.second-marker-content {
-		font-size: 20px;
+		font-size: 24px;
+		line-height: 26px;
 	}
 
 	.third-marker {
@@ -199,6 +203,7 @@
 		left: 0;
 		bottom: 40px;
 		font-size: 14px;
+		line-height: 16px;
 		color: white;
 		opacity: 0;
 	}
@@ -212,13 +217,14 @@
 	}
 	.third-marker-content {
 		text-align: right;
-		font-size: 20px;
+		font-size: 24px;
+		line-height: 26px;
 	}
 
 	.img-bounder {
 		height: 100px;
 		margin-left: 14%;
-		width: 73.5%;
+		width: 72.5%;
 		position: relative;
 	}
 	
@@ -317,8 +323,12 @@ export default {
 		.to(".third-marker", {opacity:0, left: 0,  duration: 6, delay: 10}, "ballonmove-2")
 		.to(".img-ballon", {top: '20%', width: '115vw', height: '16vw', duration: 6, x: 0, delay:10, opacity: 1}, "ballonmove-2")
 		.to(".adjust-content", {opacity:1, duration: 3, onComplete: ()=> {
-			animation3.stop()
-			animation3.play()
+			selft.disable();
+			animation3.stop();
+			animation3.play();
+			setTimeout(() => {
+				selft.enable()
+			}, 2000);
 		}})
 		.to(".temp", {x: '-200vh', duration: 10})
 
@@ -329,7 +339,7 @@ export default {
 				let style =  window.getComputedStyle(document.getElementById('img-slider'));
 				var transformX = new WebKitCSSMatrix(style.transform).m41;
 				var parentW = document.getElementById('img-adjust').parentElement.clientWidth
-				document.getElementById('img-adjust').style.right = `${0.13*parentW-transformX}px`
+				document.getElementById('img-adjust').style.right = `${0.14*parentW-transformX}px`
 			},
 			onDragEnd () {
 				console.log('onDragEnd fired')

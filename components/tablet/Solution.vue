@@ -3,9 +3,9 @@
         <div  class="solution-section" >
             <div id="solution-section" class="solution-section-item solution-section-1">
                 <div class="solution1-container" >
-                    <div class="solution" >
+                    <div class="solution solution-box-wrapper" >
                         <div class="solution-box solution-box-1" style="color: #fd4f01; border-radius: 20px; background-color: white; text-align: center;">
-                            <div>
+                            <div style="letter-spacing: -3.5px;">
                                 <p>One</p>
                                 <p>Solution</p>
                             </div>
@@ -51,7 +51,12 @@
         position: relative;
         height: calc(100vh - 75px);
         background-color: #F25625;
-        /* display: flex; */
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .solution-box-wrapper {
         width: 100%;
     }
 
@@ -95,10 +100,9 @@
         overflow: hidden;
     }
     #chartLottie2 {
-        scale: 1.8;
-        height: 50%;
+        width: 30vw;
         position: absolute;
-        top: 8vh;
+        top: 3vh;
         right: 1vw;
     }
   </style>
@@ -157,11 +161,11 @@
                 renderer: "svg",
                 loop: false,
                 autoplay: false,
-                path: 'https://assets1.lottiefiles.com/packages/lf20_bh2Ncy3wJG.json'
+                path: 'https://lottie.host/49c3f108-43a9-45cc-b363-07c107bfe57b/zwR94Vz9bV.json'
             });
 
-        gsap.to('.solution-box-2', {scale: 0.6}).play()
-        gsap.to('.solution-box-3', {scale: 0.6}).play()
+        gsap.to('.solution-box-2', {scale: 0.6, width: '500px'}).play()
+        gsap.to('.solution-box-3', {scale: 0.6, width: '500px'}).play()
 
         gsap.timeline({
             scrollTrigger: {
@@ -172,7 +176,9 @@
                 end: '+=2000'
             }
         })
-        .to('.solution .solution-box-1', {scale: 0.6, ease: "power2.in"})
+        .add('small-scale')
+        .to('.solution .solution-box-1', {scale: 0.6, width: '500px', ease: "power2.in"}, 'small-scale')
+        .to('.solution-box-wrapper', {width: '500px', ease: "power2.in"}, 'small-scale')
         .to('.solution .solution-box-1', {y: '-150vh', ease: "power2.in"})
         .to('.solution .solution-box-2', {y: '-150vh', ease: "power2.in"})
 

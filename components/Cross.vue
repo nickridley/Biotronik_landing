@@ -78,10 +78,10 @@
 					</div>
 				</div>
 				<div class="cross-right-5 cross-right-item right-section p-4 color-gray" style="padding-top: 100px;">
-					<p class="font-orange font-din-medium" style="font-size: 36px; border-top: 2px solid #ED6C23; display: table;">Achieve the pushability of an 0.035"</p>
-					<p class="font-orange font-din-medium" style="font-size: 36px;">system on an 0.018" platform*</p>
+					<p class="font-orange font-din-medium" style="font-size: 36px; line-height: 38px; border-top: 2px solid #ED6C23; display: table;">Achieve the pushability of an 0.035"</p>
+					<p class="font-orange font-din-medium" style="font-size: 36px; line-height: 38px;">system on an 0.018" platform*</p>
 					<div style="margin-top: 70px;">
-						<p class="font-din-medium" style="border-bottom: 2px solid grey;">Oscar Variale Pushability</p>
+						<p class="font-din-medium" style="border-bottom: 2px solid grey; font-size: 24px; line-height: 26px;">Oscar Variable Pushability</p>
 						<div class="grid grid-cols-3 gap-4 pr-4">
 							<div class="col-span-1">
 								<p class="mt-4" style="color: #ED6C23;">Oscar, 0.018" <br>BIOTRONIK</p>
@@ -102,7 +102,7 @@
 							</div>
 							<div class="col-span-2" style="padding-top: 30px;">
 								<div id="crossLottie" class="lottie-wrapper" ref="crossChart" style="width: 100%; position: relative;">
-									<img src="../assets/img/Scale.png" style="position: absolute; left: 0; right: 0; bottom: -100px;"/>
+									<!-- <img src="../assets/img/Scale.png" style="position: absolute; left: 0; right: 0; bottom: -100px;"/> -->
 								</div>
 							</div>
 						</div>
@@ -243,7 +243,7 @@
                 renderer: "svg",
                 loop: false,
                 autoplay: false,
-                path: 'https://assets9.lottiefiles.com/packages/lf20_rJzvFizMU4.json'
+                path: 'https://lottie.host/9a107937-dcc3-4b3c-8749-003e71accd5c/Pe90CPFnQW.json'
             });
 
 		const sections = gsap.utils.toArray('.right-section')
